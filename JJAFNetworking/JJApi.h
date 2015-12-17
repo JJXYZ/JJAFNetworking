@@ -7,13 +7,38 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "AFNetworking.h"
 #import "JJAFN_ENUM.h"
 
 @class JJApi;
 
 typedef void(^JJApiBlock)(JJApi *api);
+typedef void(^JJApiSuccessBlock)(JJApi *api);
+typedef void(^JJApiFailureBlock)(JJApi *api);
+
+
+@protocol JJApiDeleage <NSObject>
+
+- (void)apiSuccess:(JJApi *)api;
+- (void)apiFailed:(JJApi *)api;
+
+@end
 
 @interface JJApi : NSObject
+
+/** 代理 */
+@property (nonatomic, weak) id<JJApiDeleage> delegate;
+
+/** SuccessBlock */
+@property (nonatomic, copy) JJApiSuccessBlock apiSuccessBlock;
+
+/** FailureBlock */
+@property (nonatomic, copy) JJApiFailureBlock apiFailureBlock;
+
+/** AFN的operation */
+@property (nonatomic, strong) AFHTTPRequestOperation *requestOperation;
+
+#pragma mark - Public Methods
 
 /** 发起请求,代理方式 */
 - (void)start;
@@ -24,22 +49,7 @@ typedef void(^JJApiBlock)(JJApi *api);
 /** 取消请求 */
 - (void)cancel;
 
-/** 请求方式,默认GET */
-- (JJAFNMethodType)AFNMethod;
-
-/** 请求序列化方式,默认HTTP */
-- (JJAFNRequestSerializerType)serializerType;
-
-/** 设置授权HTTP Header,例:@{username:@"username", password:@"password"} */
-- (NSDictionary *)authorizationHeaderField;
-
-/** 超时时间,默认10秒 */
-- (NSTimeInterval)timeoutInterval;
-
-/** 请求URL */
-- (NSString *)URLString;
-
-/** 参数 */
-- (id)parameters;
+/** 把block置nil来打破循环引用 */
+- (void)clearBlock;
 
 @end

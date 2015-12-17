@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		490361041B7F65121BD33F10 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C36210885C73C98C1A7E635B /* libPods.a */; };
+		693D64501C23044F003F5964 /* JJApi+RewriteMethod.m in Sources */ = {isa = PBXBuildFile; fileRef = 693D644F1C23044F003F5964 /* JJApi+RewriteMethod.m */; };
+		693D64531C2306C1003F5964 /* JJApi+HandleMethod.m in Sources */ = {isa = PBXBuildFile; fileRef = 693D64521C2306C1003F5964 /* JJApi+HandleMethod.m */; };
 		695403F11C1720FF00B777EF /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 695403F01C1720FF00B777EF /* main.m */; };
 		695403F41C1720FF00B777EF /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 695403F31C1720FF00B777EF /* AppDelegate.m */; };
 		695403F71C1720FF00B777EF /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 695403F61C1720FF00B777EF /* ViewController.m */; };
@@ -20,6 +22,11 @@
 
 /* Begin PBXFileReference section */
 		6187B52B08E29C8C5ACE4425 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
+		693D644E1C23044F003F5964 /* JJApi+RewriteMethod.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "JJApi+RewriteMethod.h"; sourceTree = "<group>"; };
+		693D644F1C23044F003F5964 /* JJApi+RewriteMethod.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "JJApi+RewriteMethod.m"; sourceTree = "<group>"; };
+		693D64511C2306C1003F5964 /* JJApi+HandleMethod.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "JJApi+HandleMethod.h"; sourceTree = "<group>"; };
+		693D64521C2306C1003F5964 /* JJApi+HandleMethod.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "JJApi+HandleMethod.m"; sourceTree = "<group>"; };
+		693D64551C2313E9003F5964 /* JJAFNetworking.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JJAFNetworking.h; sourceTree = "<group>"; };
 		695403EC1C1720FF00B777EF /* JJAFNetworking_Demo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JJAFNetworking_Demo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		695403F01C1720FF00B777EF /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		695403F21C1720FF00B777EF /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -106,11 +113,16 @@
 		A31880E11C22670D0051229F /* JJAFNetworking */ = {
 			isa = PBXGroup;
 			children = (
+				693D64551C2313E9003F5964 /* JJAFNetworking.h */,
 				A31880E51C226E200051229F /* JJAFN_ENUM.h */,
 				A31880E21C2267760051229F /* JJApiManager.h */,
 				A31880E31C2267760051229F /* JJApiManager.m */,
 				A39C1D3F1C2290DB0018647C /* JJApi.h */,
 				A39C1D401C2290DB0018647C /* JJApi.m */,
+				693D644E1C23044F003F5964 /* JJApi+RewriteMethod.h */,
+				693D644F1C23044F003F5964 /* JJApi+RewriteMethod.m */,
+				693D64511C2306C1003F5964 /* JJApi+HandleMethod.h */,
+				693D64521C2306C1003F5964 /* JJApi+HandleMethod.m */,
 			);
 			name = JJAFNetworking;
 			path = ../../JJAFNetworking;
@@ -248,7 +260,9 @@
 				695403F71C1720FF00B777EF /* ViewController.m in Sources */,
 				695403F41C1720FF00B777EF /* AppDelegate.m in Sources */,
 				A31880E41C2267760051229F /* JJApiManager.m in Sources */,
+				693D64531C2306C1003F5964 /* JJApi+HandleMethod.m in Sources */,
 				695403F11C1720FF00B777EF /* main.m in Sources */,
+				693D64501C23044F003F5964 /* JJApi+RewriteMethod.m in Sources */,
 				A39C1D411C2290DB0018647C /* JJApi.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

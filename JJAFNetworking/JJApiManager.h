@@ -7,11 +7,12 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "AFNetworking.h"
-#import "JJApi.h"
+
+
 
 #define API_MANAGER [JJApiManager sharedInstance]
 
+@class JJApi;
 @interface JJApiManager : NSObject
 
 #pragma mark - Lifecycle
@@ -31,9 +32,10 @@
 /** 当前请求队列中的个数 */
 - (NSInteger)curOperationCount;
 
-/** 加入API到队列里面,发起请求 */
-- (void)addApi:(JJApi *)api;
+/** 发起请求 */
+- (void)startApi:(JJApi *)api;
 
-
+/** 取消请求 */
+- (void)cancelApi:(JJApi *)api;
 
 @end

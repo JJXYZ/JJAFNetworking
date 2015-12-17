@@ -10,7 +10,7 @@
 #define JJAFN_ENUM_h
 
 
-typedef NS_ENUM(NSInteger , JJAFNMethodType) {
+typedef NS_ENUM(NSInteger, JJAFNMethodType) {
     JJAFNMethod_GET = 0,
     JJAFNMethod_POST,
     JJAFNMethod_HEAD,
@@ -19,7 +19,7 @@ typedef NS_ENUM(NSInteger , JJAFNMethodType) {
     JJAFNMethod_PATCH
 };
 
-typedef NS_ENUM(NSInteger , JJAFNRequestSerializerType) {
+typedef NS_ENUM(NSInteger, JJAFNRequestSerializerType) {
     JJAFNRequestSerializer_HTTP = 0,
     JJAFNRequestSerializer_JSON,
 };

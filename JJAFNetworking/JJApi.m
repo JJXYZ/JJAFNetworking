@@ -7,53 +7,33 @@
 //
 
 #import "JJApi.h"
-
+#import "JJApi+HandleMethod.h"
+#import "JJApiManager.h"
 
 @implementation JJApi
 
-#pragma mark - Lifecycle
-#pragma mark - Private Methods
 #pragma mark - Public Methods
 
 - (void)start {
-    
+    [API_MANAGER startApi:self];
 }
 
 - (void)startWithSuccess:(JJApiBlock)success failure:(JJApiBlock)failure {
-    
+    self.apiSuccessBlock = success;
+    self.apiFailureBlock = failure;
+    [API_MANAGER startApi:self];
 }
 
 
 - (void)cancel {
-    
+    [API_MANAGER cancelApi:self];
 }
 
-- (JJAFNRequestSerializerType)serializerType {
-    return JJAFNRequestSerializer_HTTP;
+- (void)clearBlock {
+    self.apiSuccessBlock = nil;
+    self.apiFailureBlock = nil;
 }
 
-- (NSDictionary *)authorizationHeaderField {
-    return nil;
-}
 
-- (NSTimeInterval)timeoutInterval {
-    return 10;
-}
-
-- (JJAFNMethodType)AFNMethod {
-    return JJAFNMethod_GET;
-}
-
-- (NSString *)URLString {
-    return nil;
-}
-
-- (id)parameters {
-    return nil;
-}
-
-#pragma mark - Inherit
-#pragma mark - Event
-#pragma mark - Property
 
 @end
