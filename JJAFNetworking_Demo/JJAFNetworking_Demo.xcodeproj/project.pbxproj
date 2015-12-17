@@ -14,6 +14,8 @@
 		695403FA1C1720FF00B777EF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 695403F81C1720FF00B777EF /* Main.storyboard */; };
 		695403FC1C1720FF00B777EF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 695403FB1C1720FF00B777EF /* Assets.xcassets */; };
 		695403FF1C1720FF00B777EF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 695403FD1C1720FF00B777EF /* LaunchScreen.storyboard */; };
+		A31880E41C2267760051229F /* JJApiManager.m in Sources */ = {isa = PBXBuildFile; fileRef = A31880E31C2267760051229F /* JJApiManager.m */; };
+		A39C1D411C2290DB0018647C /* JJApi.m in Sources */ = {isa = PBXBuildFile; fileRef = A39C1D401C2290DB0018647C /* JJApi.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +30,11 @@
 		695403FB1C1720FF00B777EF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		695403FE1C1720FF00B777EF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		695404001C1720FF00B777EF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A31880E21C2267760051229F /* JJApiManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JJApiManager.h; sourceTree = "<group>"; };
+		A31880E31C2267760051229F /* JJApiManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JJApiManager.m; sourceTree = "<group>"; };
+		A31880E51C226E200051229F /* JJAFN_ENUM.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JJAFN_ENUM.h; sourceTree = "<group>"; };
+		A39C1D3F1C2290DB0018647C /* JJApi.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JJApi.h; sourceTree = "<group>"; };
+		A39C1D401C2290DB0018647C /* JJApi.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JJApi.m; sourceTree = "<group>"; };
 		BB9AAB02CB3504BF2E4FFB90 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		C36210885C73C98C1A7E635B /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -74,6 +81,7 @@
 		695403EE1C1720FF00B777EF /* JJAFNetworking_Demo */ = {
 			isa = PBXGroup;
 			children = (
+				A31880E11C22670D0051229F /* JJAFNetworking */,
 				695403F21C1720FF00B777EF /* AppDelegate.h */,
 				695403F31C1720FF00B777EF /* AppDelegate.m */,
 				695403F51C1720FF00B777EF /* ViewController.h */,
@@ -93,6 +101,19 @@
 				695403F01C1720FF00B777EF /* main.m */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		A31880E11C22670D0051229F /* JJAFNetworking */ = {
+			isa = PBXGroup;
+			children = (
+				A31880E51C226E200051229F /* JJAFN_ENUM.h */,
+				A31880E21C2267760051229F /* JJApiManager.h */,
+				A31880E31C2267760051229F /* JJApiManager.m */,
+				A39C1D3F1C2290DB0018647C /* JJApi.h */,
+				A39C1D401C2290DB0018647C /* JJApi.m */,
+			);
+			name = JJAFNetworking;
+			path = ../../JJAFNetworking;
 			sourceTree = "<group>";
 		};
 		A678AC9FB369179891B7B816 /* Frameworks */ = {
@@ -115,6 +136,7 @@
 				695403E91C1720FF00B777EF /* Frameworks */,
 				695403EA1C1720FF00B777EF /* Resources */,
 				8AD31E808460D3EDBC9263AD /* Copy Pods Resources */,
+				7CDD13629E501D2F6DB7C93E /* Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -171,6 +193,21 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		7CDD13629E501D2F6DB7C93E /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		8AD31E808460D3EDBC9263AD /* Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -210,7 +247,9 @@
 			files = (
 				695403F71C1720FF00B777EF /* ViewController.m in Sources */,
 				695403F41C1720FF00B777EF /* AppDelegate.m in Sources */,
+				A31880E41C2267760051229F /* JJApiManager.m in Sources */,
 				695403F11C1720FF00B777EF /* main.m in Sources */,
+				A39C1D411C2290DB0018647C /* JJApi.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

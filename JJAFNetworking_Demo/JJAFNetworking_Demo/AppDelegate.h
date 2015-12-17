@@ -6,6 +6,13 @@
 //  Copyright © 2015年 JJ. All rights reserved.
 //
 
+#pragma mark - Lifecycle
+#pragma mark - Private Methods
+#pragma mark - Public Methods
+#pragma mark - Inherit
+#pragma mark - Event
+#pragma mark - Property
+
 #import <UIKit/UIKit.h>
 
 @interface AppDelegate : UIResponder <UIApplicationDelegate>
