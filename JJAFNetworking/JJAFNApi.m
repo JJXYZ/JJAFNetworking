@@ -6,11 +6,12 @@
 //  Copyright © 2015年 JJ. All rights reserved.
 //
 
-#import "JJApi.h"
-#import "JJApi+HandleMethod.h"
-#import "JJApiManager.h"
+#import "JJAFNApi.h"
+#import "JJAFNApi+HandleMethod.h"
+#import "JJAFNApiManager.h"
+#import "JJAFNInput.h"
 
-@implementation JJApi
+@implementation JJAFNApi
 
 #pragma mark - Public Methods
 
@@ -32,6 +33,20 @@
 - (void)clearBlock {
     self.apiSuccessBlock = nil;
     self.apiFailureBlock = nil;
+}
+
+#pragma mark - Property
+
+- (id)responseObject {
+    return self.requestOperation.responseObject;
+}
+
+- (NSInteger)responseStatusCode {
+    return self.requestOperation.response.statusCode;
+}
+
+- (NSDictionary *)responseAllHeaderFields {
+    return self.requestOperation.response.allHeaderFields;
 }
 
 

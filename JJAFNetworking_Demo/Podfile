@@ -5,3 +5,4 @@ source 'https://github.com/CocoaPods/Specs.git'
 
 pod 'AFNetworking', '~> 2.6.3'
 pod 'AFDownloadRequestOperation', '~> 2.0.1'
+pod 'MJExtension', '~> 3.0.7'

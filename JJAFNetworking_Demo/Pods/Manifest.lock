@@ -22,13 +22,16 @@ PODS:
   - AFNetworking/UIKit (2.6.3):
     - AFNetworking/NSURLConnection
     - AFNetworking/NSURLSession
+  - MJExtension (3.0.7)
 
 DEPENDENCIES:
   - AFDownloadRequestOperation (~> 2.0.1)
   - AFNetworking (~> 2.6.3)
+  - MJExtension (~> 3.0.7)
 
 SPEC CHECKSUMS:
   AFDownloadRequestOperation: 748a1643423e1ddb23f2178f778087d4f0ae8ac7
   AFNetworking: cb8d14a848e831097108418f5d49217339d4eb60
+  MJExtension: 290cc966f0f849b12b6391a38e296e0004ae8e5e
 
 COCOAPODS: 0.39.0

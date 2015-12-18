@@ -13,14 +13,15 @@
 /** pods */
 #import "AFDownloadRequestOperation.h"
 #import "AFNetworking.h"
+#import "MJExtension.h"
 
 /** core */
 #import "JJAFN_ENUM.h"
 #import "JJApiManager.h"
 #import "JJApi.h"
-#import "JJApi+RewriteMethod.h"
-#import "JJApi+HandleMethod.h"
-
+#import "JJAFNApi+RewriteMethod.h"
+#import "JJAFNApi+HandleMethod.h"
+#import "JJAFNInput.h"
 
 
 #endif /* JJAFNetworking_h */

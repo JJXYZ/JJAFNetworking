@@ -1,20 +1,25 @@
 //
-//  JJApi+HandleMethod.m
+//  JJAFNApi+HandleMethod.m
 //  JJAFNetworking_Demo
 //
 //  Created by Jay on 15/12/17.
 //  Copyright © 2015年 JJ. All rights reserved.
 //
 
-#import "JJApi+HandleMethod.h"
+#import "JJAFNApi+HandleMethod.h"
 
-@implementation JJApi (HandleMethod)
+@implementation JJAFNApi (HandleMethod)
 
 #pragma mark - Inherit
 
 - (void)willstart {
     
 }
+
+- (void)reformData {
+    self.output = self.responseObject;
+}
+
 
 - (void)didstart {
     

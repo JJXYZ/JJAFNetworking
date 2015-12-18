@@ -6,14 +6,15 @@
 //  Copyright © 2015年 JJ. All rights reserved.
 //
 
-#import "JJApiManager.h"
+#import "JJAFNApiManager.h"
 #import "AFNetworking.h"
 #import "JJAFN_ENUM.h"
-#import "JJApi.h"
-#import "JJApi+RewriteMethod.h"
-#import "JJApi+HandleMethod.h"
+#import "JJAFNApi.h"
+#import "JJAFNApi+RewriteMethod.h"
+#import "JJAFNApi+HandleMethod.h"
+#import "JJAFNApi+Log.h"
 
-@interface JJApiManager ()
+@interface JJAFNApiManager ()
 
 /** OperationManager */
 @property (nonatomic, strong, readwrite) AFHTTPRequestOperationManager *manager;
@@ -23,11 +24,11 @@
 
 @end
 
-@implementation JJApiManager
+@implementation JJAFNApiManager
 
 #pragma mark - Lifecycle
 
-+ (JJApiManager *)sharedInstance {
++ (JJAFNApiManager *)sharedInstance {
     static id sharedInstance = nil;
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
@@ -39,19 +40,19 @@
 #pragma mark - Private Methods
 
 /** 设置超时时间 */
-- (void)configTimeoutInterval:(JJApi *)api {
+- (void)configTimeoutInterval:(JJAFNApi *)api {
     self.manager.requestSerializer.timeoutInterval = [api timeoutInterval];
 }
 
 /** 设置请求序列化方式 */
-- (void)configRequestSerializer:(JJApi *)api {
+- (void)configRequestSerializer:(JJAFNApi *)api {
     if ([api serializerType] == JJAFNRequestSerializer_JSON) {
         self.manager.requestSerializer = [AFJSONRequestSerializer serializer];
     }
 }
 
 /** 设置授权HTTP Header */
-- (void)configAuthorizationHeaderField:(JJApi *)api {
+- (void)configAuthorizationHeaderField:(JJAFNApi *)api {
     NSDictionary *authorizationHeaderField = [api authorizationHeaderField];
     if (authorizationHeaderField.count) {
         [_manager.requestSerializer setAuthorizationHeaderFieldWithUsername:[authorizationHeaderField objectForKey:@"username"] password:[authorizationHeaderField objectForKey:@"password"]];
@@ -59,7 +60,7 @@
 }
 
 /** 设置HTTP Header */
-- (void)configHeaderField:(JJApi *)api {
+- (void)configHeaderField:(JJAFNApi *)api {
     NSDictionary *headerField = [api headerField];
     if (headerField.count) {
         for (id hf in headerField.allKeys) {
@@ -71,8 +72,18 @@
     }
 }
 
+/** HTTPS请求 */
+- (void)configHTTPS:(JJAFNApi *)api {
+    if ([api AFNHTTPType] == JJAFNHTTPType_HTTPS) {
+        AFSecurityPolicy * securityPolicy = [AFSecurityPolicy policyWithPinningMode:AFSSLPinningModeCertificate];
+        securityPolicy.allowInvalidCertificates = YES;
+        securityPolicy.validatesDomainName = YES;
+        self.manager.securityPolicy = securityPolicy;
+    }
+}
+
 /** 获取URL */
-- (NSString *)getURLString:(JJApi *)api {
+- (NSString *)getURLString:(JJAFNApi *)api {
     if ([api customURLString].length) {
         return [api customURLString];
     }
@@ -82,16 +93,20 @@
 }
 
 /** 获取参数 */
-- (id)getParameters:(JJApi *)api {
+- (id)getParameters:(JJAFNApi *)api {
     return [api parameters];
 }
 
 #pragma mark  API Result
 
 /** 处理请求成功 */
-- (void)handleSuccessApi:(JJApi *)api operation:(AFHTTPRequestOperation *)operation {
+- (void)handleSuccessApi:(JJAFNApi *)api operation:(AFHTTPRequestOperation *)operation {
+    /** 打印Log */
+    [api logEndApi];
     
     [api willHandleSuccess];
+    
+    [api reformData];
     
     if (api.delegate && [api.delegate respondsToSelector:@selector(apiSuccess:)]) {
         [api.delegate apiSuccess:api];
@@ -107,7 +122,9 @@
 }
 
 /** 处理请求失败 */
-- (void)handleFailureApi:(JJApi *)api operation:(AFHTTPRequestOperation *)operation {
+- (void)handleFailureApi:(JJAFNApi *)api operation:(AFHTTPRequestOperation *)operation {
+    /** 打印Log */
+    [api logEndApi];
     
     [api willHandleFailure];
     
@@ -132,7 +149,7 @@
 }
 
 /** 记录请求的Api */
-- (void)addOperation:(JJApi *)api {
+- (void)addOperation:(JJAFNApi *)api {
     if (api.requestOperation) {
         NSString *key = [self requestHashKey:api.requestOperation];
         @synchronized(self) {
@@ -153,7 +170,7 @@
 - (void)cancelAllApi {
     NSDictionary *apiActiveDic = [_apiActiveDic copy];
     for (NSString *key in apiActiveDic) {
-        JJApi *api = [apiActiveDic objectForKey:key];
+        JJAFNApi *api = [apiActiveDic objectForKey:key];
         [api cancel];
     }
 }
@@ -177,7 +194,7 @@
     }
 }
 
-- (void)startApi:(JJApi *)api {
+- (void)startApi:(JJAFNApi *)api {
     
     [api willstart];
     
@@ -192,6 +209,9 @@
     
     /** 设置HTTP Header */
     [self configHeaderField:api];
+    
+    /** 设置HTTPS请求 */
+    [self configHTTPS:api];
     
     NSString *URLString = [self getURLString:api];
     NSString *parameters = [self getParameters:api];
@@ -244,7 +264,7 @@
     [api didstart];
 }
 
-- (void)cancelApi:(JJApi *)api {
+- (void)cancelApi:(JJAFNApi *)api {
     
     [api willCancel];
     

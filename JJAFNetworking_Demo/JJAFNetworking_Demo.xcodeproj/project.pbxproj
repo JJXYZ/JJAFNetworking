@@ -8,24 +8,26 @@
 
 /* Begin PBXBuildFile section */
 		490361041B7F65121BD33F10 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C36210885C73C98C1A7E635B /* libPods.a */; };
-		693D64501C23044F003F5964 /* JJApi+RewriteMethod.m in Sources */ = {isa = PBXBuildFile; fileRef = 693D644F1C23044F003F5964 /* JJApi+RewriteMethod.m */; };
-		693D64531C2306C1003F5964 /* JJApi+HandleMethod.m in Sources */ = {isa = PBXBuildFile; fileRef = 693D64521C2306C1003F5964 /* JJApi+HandleMethod.m */; };
+		693D64501C23044F003F5964 /* JJAFNApi+RewriteMethod.m in Sources */ = {isa = PBXBuildFile; fileRef = 693D644F1C23044F003F5964 /* JJAFNApi+RewriteMethod.m */; };
+		693D64531C2306C1003F5964 /* JJAFNApi+HandleMethod.m in Sources */ = {isa = PBXBuildFile; fileRef = 693D64521C2306C1003F5964 /* JJAFNApi+HandleMethod.m */; };
 		695403F11C1720FF00B777EF /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 695403F01C1720FF00B777EF /* main.m */; };
 		695403F41C1720FF00B777EF /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 695403F31C1720FF00B777EF /* AppDelegate.m */; };
 		695403F71C1720FF00B777EF /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 695403F61C1720FF00B777EF /* ViewController.m */; };
 		695403FA1C1720FF00B777EF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 695403F81C1720FF00B777EF /* Main.storyboard */; };
 		695403FC1C1720FF00B777EF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 695403FB1C1720FF00B777EF /* Assets.xcassets */; };
 		695403FF1C1720FF00B777EF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 695403FD1C1720FF00B777EF /* LaunchScreen.storyboard */; };
-		A31880E41C2267760051229F /* JJApiManager.m in Sources */ = {isa = PBXBuildFile; fileRef = A31880E31C2267760051229F /* JJApiManager.m */; };
-		A39C1D411C2290DB0018647C /* JJApi.m in Sources */ = {isa = PBXBuildFile; fileRef = A39C1D401C2290DB0018647C /* JJApi.m */; };
+		A31880E41C2267760051229F /* JJAFNApiManager.m in Sources */ = {isa = PBXBuildFile; fileRef = A31880E31C2267760051229F /* JJAFNApiManager.m */; };
+		A320ECD51C23AF4B0030095A /* JJAFNInput.m in Sources */ = {isa = PBXBuildFile; fileRef = A320ECD41C23AF4B0030095A /* JJAFNInput.m */; };
+		A320ECDB1C23EBF70030095A /* JJAFNApi+Log.m in Sources */ = {isa = PBXBuildFile; fileRef = A320ECDA1C23EBF70030095A /* JJAFNApi+Log.m */; };
+		A39C1D411C2290DB0018647C /* JJAFNApi.m in Sources */ = {isa = PBXBuildFile; fileRef = A39C1D401C2290DB0018647C /* JJAFNApi.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		6187B52B08E29C8C5ACE4425 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
-		693D644E1C23044F003F5964 /* JJApi+RewriteMethod.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "JJApi+RewriteMethod.h"; sourceTree = "<group>"; };
-		693D644F1C23044F003F5964 /* JJApi+RewriteMethod.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "JJApi+RewriteMethod.m"; sourceTree = "<group>"; };
-		693D64511C2306C1003F5964 /* JJApi+HandleMethod.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "JJApi+HandleMethod.h"; sourceTree = "<group>"; };
-		693D64521C2306C1003F5964 /* JJApi+HandleMethod.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "JJApi+HandleMethod.m"; sourceTree = "<group>"; };
+		693D644E1C23044F003F5964 /* JJAFNApi+RewriteMethod.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "JJAFNApi+RewriteMethod.h"; sourceTree = "<group>"; };
+		693D644F1C23044F003F5964 /* JJAFNApi+RewriteMethod.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "JJAFNApi+RewriteMethod.m"; sourceTree = "<group>"; };
+		693D64511C2306C1003F5964 /* JJAFNApi+HandleMethod.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "JJAFNApi+HandleMethod.h"; sourceTree = "<group>"; };
+		693D64521C2306C1003F5964 /* JJAFNApi+HandleMethod.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "JJAFNApi+HandleMethod.m"; sourceTree = "<group>"; };
 		693D64551C2313E9003F5964 /* JJAFNetworking.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JJAFNetworking.h; sourceTree = "<group>"; };
 		695403EC1C1720FF00B777EF /* JJAFNetworking_Demo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JJAFNetworking_Demo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		695403F01C1720FF00B777EF /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -37,11 +39,15 @@
 		695403FB1C1720FF00B777EF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		695403FE1C1720FF00B777EF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		695404001C1720FF00B777EF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		A31880E21C2267760051229F /* JJApiManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JJApiManager.h; sourceTree = "<group>"; };
-		A31880E31C2267760051229F /* JJApiManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JJApiManager.m; sourceTree = "<group>"; };
+		A31880E21C2267760051229F /* JJAFNApiManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JJAFNApiManager.h; sourceTree = "<group>"; };
+		A31880E31C2267760051229F /* JJAFNApiManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JJAFNApiManager.m; sourceTree = "<group>"; };
 		A31880E51C226E200051229F /* JJAFN_ENUM.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JJAFN_ENUM.h; sourceTree = "<group>"; };
-		A39C1D3F1C2290DB0018647C /* JJApi.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JJApi.h; sourceTree = "<group>"; };
-		A39C1D401C2290DB0018647C /* JJApi.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JJApi.m; sourceTree = "<group>"; };
+		A320ECD31C23AF4B0030095A /* JJAFNInput.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JJAFNInput.h; sourceTree = "<group>"; };
+		A320ECD41C23AF4B0030095A /* JJAFNInput.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JJAFNInput.m; sourceTree = "<group>"; };
+		A320ECD91C23EBF70030095A /* JJAFNApi+Log.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "JJAFNApi+Log.h"; sourceTree = "<group>"; };
+		A320ECDA1C23EBF70030095A /* JJAFNApi+Log.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "JJAFNApi+Log.m"; sourceTree = "<group>"; };
+		A39C1D3F1C2290DB0018647C /* JJAFNApi.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JJAFNApi.h; sourceTree = "<group>"; };
+		A39C1D401C2290DB0018647C /* JJAFNApi.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JJAFNApi.m; sourceTree = "<group>"; };
 		BB9AAB02CB3504BF2E4FFB90 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		C36210885C73C98C1A7E635B /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -115,14 +121,18 @@
 			children = (
 				693D64551C2313E9003F5964 /* JJAFNetworking.h */,
 				A31880E51C226E200051229F /* JJAFN_ENUM.h */,
-				A31880E21C2267760051229F /* JJApiManager.h */,
-				A31880E31C2267760051229F /* JJApiManager.m */,
-				A39C1D3F1C2290DB0018647C /* JJApi.h */,
-				A39C1D401C2290DB0018647C /* JJApi.m */,
-				693D644E1C23044F003F5964 /* JJApi+RewriteMethod.h */,
-				693D644F1C23044F003F5964 /* JJApi+RewriteMethod.m */,
-				693D64511C2306C1003F5964 /* JJApi+HandleMethod.h */,
-				693D64521C2306C1003F5964 /* JJApi+HandleMethod.m */,
+				A31880E21C2267760051229F /* JJAFNApiManager.h */,
+				A31880E31C2267760051229F /* JJAFNApiManager.m */,
+				A320ECD31C23AF4B0030095A /* JJAFNInput.h */,
+				A320ECD41C23AF4B0030095A /* JJAFNInput.m */,
+				A39C1D3F1C2290DB0018647C /* JJAFNApi.h */,
+				A39C1D401C2290DB0018647C /* JJAFNApi.m */,
+				693D644E1C23044F003F5964 /* JJAFNApi+RewriteMethod.h */,
+				693D644F1C23044F003F5964 /* JJAFNApi+RewriteMethod.m */,
+				693D64511C2306C1003F5964 /* JJAFNApi+HandleMethod.h */,
+				693D64521C2306C1003F5964 /* JJAFNApi+HandleMethod.m */,
+				A320ECD91C23EBF70030095A /* JJAFNApi+Log.h */,
+				A320ECDA1C23EBF70030095A /* JJAFNApi+Log.m */,
 			);
 			name = JJAFNetworking;
 			path = ../../JJAFNetworking;
@@ -257,13 +267,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A320ECD51C23AF4B0030095A /* JJAFNInput.m in Sources */,
 				695403F71C1720FF00B777EF /* ViewController.m in Sources */,
+				A320ECDB1C23EBF70030095A /* JJAFNApi+Log.m in Sources */,
 				695403F41C1720FF00B777EF /* AppDelegate.m in Sources */,
-				A31880E41C2267760051229F /* JJApiManager.m in Sources */,
-				693D64531C2306C1003F5964 /* JJApi+HandleMethod.m in Sources */,
+				A31880E41C2267760051229F /* JJAFNApiManager.m in Sources */,
+				693D64531C2306C1003F5964 /* JJAFNApi+HandleMethod.m in Sources */,
 				695403F11C1720FF00B777EF /* main.m in Sources */,
-				693D64501C23044F003F5964 /* JJApi+RewriteMethod.m in Sources */,
-				A39C1D411C2290DB0018647C /* JJApi.m in Sources */,
+				693D64501C23044F003F5964 /* JJAFNApi+RewriteMethod.m in Sources */,
+				A39C1D411C2290DB0018647C /* JJAFNApi.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

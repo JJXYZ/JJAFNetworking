@@ -1,14 +1,14 @@
 //
-//  JJApi+RewriteMethod.m
+//  JJAFNApi+RewriteMethod.m
 //  JJAFNetworking_Demo
 //
 //  Created by Jay on 15/12/17.
 //  Copyright © 2015年 JJ. All rights reserved.
 //
 
-#import "JJApi+RewriteMethod.h"
+#import "JJAFNApi+RewriteMethod.h"
 
-@implementation JJApi (RewriteMethod)
+@implementation JJAFNApi (RewriteMethod)
 
 #pragma mark - Inherit
 
@@ -23,6 +23,10 @@
 
 - (NSDictionary *)authorizationHeaderField {
     return nil;
+}
+
+- (JJAFNHTTPType)AFNHTTPType {
+    return JJAFNHTTPType_HTTP;
 }
 
 - (NSTimeInterval)timeoutInterval {
@@ -42,7 +46,7 @@
 }
 
 - (id)parameters {
-    return nil;
+    return self.input;
 }
 
 

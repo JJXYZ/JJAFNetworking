@@ -1,14 +1,14 @@
 //
-//  JJApi+RewriteMethod.h
+//  JJAFNApi+RewriteMethod.h
 //  JJAFNetworking_Demo
 //
 //  Created by Jay on 15/12/17.
 //  Copyright © 2015年 JJ. All rights reserved.
 //
 
-#import "JJApi.h"
+#import "JJAFNApi.h"
 
-@interface JJApi (RewriteMethod)
+@interface JJAFNApi (RewriteMethod)
 
 #pragma mark - Inherit
 
@@ -23,6 +23,9 @@
 
 /** 设置授权HTTP Header,例:@{username:@"username", password:@"password"} */
 - (NSDictionary *)authorizationHeaderField;
+
+/** 请求方式,HTTP(默认)/HTTPS */
+- (JJAFNHTTPType)AFNHTTPType;
 
 /** 超时时间,默认10秒 */
 - (NSTimeInterval)timeoutInterval;
