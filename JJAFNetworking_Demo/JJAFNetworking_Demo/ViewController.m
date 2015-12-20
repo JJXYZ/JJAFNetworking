@@ -7,7 +7,8 @@
 //
 
 #import "ViewController.h"
-
+#import "JJAFNetworking.h"
+#import "JJDogApi.h"
 @interface ViewController ()
 
 @end
@@ -16,6 +17,14 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+//    [[JJDogApi alloc] start];
+    
+    [[JJDogApi alloc] startWithSuccess:^(JJAFNApi *api) {
+        NSLog(@"startWithSuccess");
+    } failure:^(JJAFNApi *api) {
+        NSLog(@"failure");
+    }];
 }
 
 @end

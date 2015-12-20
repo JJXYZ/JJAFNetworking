@@ -13,9 +13,10 @@
 /** 开始请求的时间 */
 @property (nonatomic, strong) NSDate *startDate;
 
-
+/** 打印开始Log */
 - (void)logStartApi;
 
+/** 打印结束Log */
 - (void)logEndApi;
 
 

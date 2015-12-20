@@ -17,8 +17,8 @@
 
 /** core */
 #import "JJAFN_ENUM.h"
-#import "JJApiManager.h"
-#import "JJApi.h"
+#import "JJAFNApiManager.h"
+#import "JJAFNApi.h"
 #import "JJAFNApi+RewriteMethod.h"
 #import "JJAFNApi+HandleMethod.h"
 #import "JJAFNInput.h"

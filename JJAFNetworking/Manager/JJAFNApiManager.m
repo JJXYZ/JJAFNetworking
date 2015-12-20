@@ -59,7 +59,7 @@
     }
 }
 
-/** 设置HTTP Header */
+/** 设置HTTP HeaderField */
 - (void)configHeaderField:(JJAFNApi *)api {
     NSDictionary *headerField = [api headerField];
     if (headerField.count) {
@@ -82,6 +82,11 @@
     }
 }
 
+/** api的优先级 */
+- (void)configQueuePriority:(JJAFNApi *)api {
+    api.requestOperation.queuePriority = [api queuePriority];
+}
+
 /** 获取URL */
 - (NSString *)getURLString:(JJAFNApi *)api {
     if ([api customURLString].length) {
@@ -101,21 +106,17 @@
 
 /** 处理请求成功 */
 - (void)handleSuccessApi:(JJAFNApi *)api operation:(AFHTTPRequestOperation *)operation {
-    /** 打印Log */
+    
     [api logEndApi];
     
     [api willHandleSuccess];
     
     [api reformData];
     
-    if (api.delegate && [api.delegate respondsToSelector:@selector(apiSuccess:)]) {
-        [api.delegate apiSuccess:api];
-    }
-    if (api.apiSuccessBlock) {
-        api.apiSuccessBlock(api);
-    }
+    [api handleSuccess];
     
     [self removeOperation:operation];
+    
     [api clearBlock];
     
     [api didHandleSuccess];
@@ -123,19 +124,15 @@
 
 /** 处理请求失败 */
 - (void)handleFailureApi:(JJAFNApi *)api operation:(AFHTTPRequestOperation *)operation {
-    /** 打印Log */
+    
     [api logEndApi];
     
     [api willHandleFailure];
     
-    if (api.delegate && [api.delegate respondsToSelector:@selector(apiFailed:)]) {
-        [api.delegate apiFailed:api];
-    }
-    if (api.apiFailureBlock) {
-        api.apiFailureBlock(api);
-    }
+    [api handleFailure];
     
     [self removeOperation:operation];
+    
     [api clearBlock];
     
     [api didHandleFailure];
@@ -259,7 +256,12 @@
         }];
     }
     
+    /** api的优先级 */
+    [self configQueuePriority:api];
+    
     [self addOperation:api];
+    
+    [api logStartApi];
     
     [api didstart];
 }

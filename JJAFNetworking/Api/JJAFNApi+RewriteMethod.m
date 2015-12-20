@@ -16,6 +16,9 @@
     return JJAFNRequestSerializer_HTTP;
 }
 
+- (NSOperationQueuePriority)queuePriority {
+    return NSOperationQueuePriorityNormal;
+}
 
 - (NSDictionary *)headerField {
     return nil;

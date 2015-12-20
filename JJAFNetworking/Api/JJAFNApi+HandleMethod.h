@@ -21,14 +21,20 @@
 /** 将要开始处理数据(成功) */
 - (void)willHandleSuccess;
 
-/**  解析数据,在willHandleSuccess后,回调之前调用 */
+/**  解析数据,在willHandleSuccess后,回调之前调用,赋值给output */
 - (void)reformData;
+
+/** 处理数据(成功) */
+- (void)handleSuccess;
 
 /** 结束处理数据(成功),回调之后调用 */
 - (void)didHandleSuccess;
 
 /** 将要开始处理数据(失败) */
 - (void)willHandleFailure;
+
+/** 处理数据(失败) */
+- (void)handleFailure;
 
 /** 结束处理数据(失败) */
 - (void)didHandleFailure;

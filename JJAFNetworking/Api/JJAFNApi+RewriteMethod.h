@@ -18,7 +18,10 @@
 /** 请求序列化方式,默认HTTP */
 - (JJAFNRequestSerializerType)serializerType;
 
-/** 设置HTTP Header */
+/** api的优先级 */
+- (NSOperationQueuePriority)queuePriority;
+
+/** 设置HTTP Header 例:@"User-Agent" */
 - (NSDictionary *)headerField;
 
 /** 设置授权HTTP Header,例:@{username:@"username", password:@"password"} */
