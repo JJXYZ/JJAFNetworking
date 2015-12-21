@@ -7,6 +7,7 @@
 //
 
 #import "JJAFNApi+RewriteMethod.h"
+#import "MJExtension.h"
 
 @implementation JJAFNApi (RewriteMethod)
 
@@ -49,7 +50,7 @@
 }
 
 - (id)parameters {
-    return self.input;
+    return self.input.mj_JSONObject;
 }
 
 

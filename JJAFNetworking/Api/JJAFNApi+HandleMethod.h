@@ -10,6 +10,19 @@
 
 @interface JJAFNApi (HandleMethod)
 
+#pragma mark - Property
+
+/** Block,需要使用到的就赋值 */
+@property (nonatomic, copy) JJApiBlock apiWillstartBlock;
+@property (nonatomic, copy) JJApiBlock apiDidstartBlock;
+@property (nonatomic, copy) JJApiBlock apiWillHandleSuccessBlock;
+@property (nonatomic, copy) JJApiBlock apiDidHandleSuccessBlock;
+@property (nonatomic, copy) JJApiBlock apiWillHandleFailureBlock;
+@property (nonatomic, copy) JJApiBlock apiDidHandleFailureBlock;
+@property (nonatomic, copy) JJApiBlock apiWillCancelBlock;
+@property (nonatomic, copy) JJApiBlock apiDidCancelBlock;
+
+
 #pragma mark - Inherit
 
 /** 将要发起请求 */

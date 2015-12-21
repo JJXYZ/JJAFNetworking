@@ -17,14 +17,14 @@
 #import <Foundation/Foundation.h>
 #import "AFNetworking.h"
 #import "JJAFN_ENUM.h"
-
+#import "JJAFNInput.h"
 
 @class JJAFNApi;
 @class JJAFNInput;
 
 typedef void(^JJApiBlock)(JJAFNApi *api);
 
-@protocol JJApiDeleage <NSObject>
+@protocol JJApiDelegate <NSObject>
 
 @optional
 
@@ -71,21 +71,12 @@ typedef void(^JJApiBlock)(JJAFNApi *api);
 @property (nonatomic, assign) NSUInteger index;
 
 /** 代理 */
-@property (nonatomic, weak) id<JJApiDeleage> delegate;
+@property (nonatomic, weak) id<JJApiDelegate> delegate;
 
 /** Block */
 @property (nonatomic, copy) JJApiBlock apiSuccessBlock;
 @property (nonatomic, copy) JJApiBlock apiFailureBlock;
 
-/** Block,需要使用到的就赋值 */
-@property (nonatomic, copy) JJApiBlock apiWillstartBlock;
-@property (nonatomic, copy) JJApiBlock apiDidstartBlock;
-@property (nonatomic, copy) JJApiBlock apiWillHandleSuccessBlock;
-@property (nonatomic, copy) JJApiBlock apiDidHandleSuccessBlock;
-@property (nonatomic, copy) JJApiBlock apiWillHandleFailureBlock;
-@property (nonatomic, copy) JJApiBlock apiDidHandleFailureBlock;
-@property (nonatomic, copy) JJApiBlock apiWillCancelBlock;
-@property (nonatomic, copy) JJApiBlock apiDidCancelBlock;
 
 /** AFN的operation */
 @property (nonatomic, strong) AFHTTPRequestOperation *requestOperation;
@@ -99,10 +90,10 @@ typedef void(^JJApiBlock)(JJAFNApi *api);
 /** 服务端返回的header字段 */
 @property (nonatomic, strong, readonly) NSDictionary *responseAllHeaderFields;
 
-/** 输入的参数,网络请求前赋值,会转成parameters */
+/** 输入的参数(JJAFNInput类或者子类),网络请求前赋值,会转成parameters */
 @property (nonatomic, strong) JJAFNInput *input;
 
-/** 输出的参数,重写reformData方法给其赋值 */
+/** 输出的参数,重写reformData方法给其赋值,默认为responseObject */
 @property (nonatomic, strong) id output;
 
 #pragma mark Public Methods

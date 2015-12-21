@@ -10,9 +10,6 @@
 
 @interface JJAFNApi (Log)
 
-/** 开始请求的时间 */
-@property (nonatomic, strong) NSDate *startDate;
-
 /** 打印开始Log */
 - (void)logStartApi;
 

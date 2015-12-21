@@ -9,6 +9,7 @@
 
 /**
  *  请求List的基类,VC再也不用维护page和pagename的问题
+    父类的JJAFNInput传入JJAFNListInput类型
  */
 
 
@@ -16,7 +17,7 @@
 
 @class JJAFNListApi;
 
-@protocol JJAFNListApiDelegate <JJApiDeleage>
+@protocol JJAFNListApiDelegate <JJApiDelegate>
 
 @optional
 
@@ -30,7 +31,14 @@
 
 @interface JJAFNListApi : JJAFNApi
 
+/** 当前的页数 */
+@property (nonatomic, assign, readonly) NSUInteger page;
 
+/** 刷新数据 */
+- (void)refreshData;
+
+/** 加载更多 */
+- (void)loadMoreData;
 
 
 @end

@@ -10,14 +10,8 @@
 
 @interface JJAFNListInput : JJAFNInput
 
-/**
- *  当前的页面
- */
+/** 当前的页数 */
 @property (nonatomic, assign) NSUInteger page;
 
-/**
- *  每页请求的个数
- */
-@property (nonatomic, assign) NSUInteger pagenum;
 
 @end

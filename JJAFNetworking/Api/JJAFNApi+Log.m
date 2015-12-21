@@ -11,6 +11,14 @@
 #import "JJAFN_ENUM.h"
 #import <objc/runtime.h>
 
+
+@interface JJAFNApi ()
+
+/** 开始请求的时间 */
+@property (nonatomic, strong) NSDate *startDate;
+
+@end
+
 @implementation JJAFNApi (Log)
 
 #pragma mark - Public Methods
@@ -23,7 +31,7 @@
     [logStr appendFormat:@"请求地址:%@\n", self.URLString];
     [logStr appendFormat:@"请求参数:%@\n", self.parameters];
     [logStr appendFormat:@"HeaderFields:%@\n", self.responseAllHeaderFields];
-    [logStr appendFormat:@"----------------------------------------------\n"];
+    [logStr appendFormat:@"----------------------------------------------\n\n\n"];
     
     NSLog(@"%@", logStr);
 #endif
@@ -47,7 +55,7 @@
         [logStr appendFormat:@"Error Localized Failure Reason:%@\n", error.localizedFailureReason];
         [logStr appendFormat:@"Error Localized Recovery Suggestion:%@\n", error.localizedRecoverySuggestion];
     }
-    [logStr appendFormat:@"===========================================\n"];
+    [logStr appendFormat:@"===========================================\n\n\n"];
     
     NSLog(@"%@", logStr);
 #endif

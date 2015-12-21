@@ -7,6 +7,7 @@
 //
 
 #import "JJAFNApi+HandleMethod.h"
+#import <objc/runtime.h>
 
 @implementation JJAFNApi (HandleMethod)
 
@@ -107,6 +108,85 @@
         self.apiDidCancelBlock(self);
     }
 }
+
+#pragma mark - Property
+
+static char kAFNApiWillstartBlockKey;
+- (JJApiBlock)apiWillstartBlock {
+    return objc_getAssociatedObject(self, &kAFNApiWillstartBlockKey);
+}
+
+- (void)setApiWillstartBlock:(JJApiBlock)apiWillstartBlock {
+    objc_setAssociatedObject(self, &kAFNApiWillstartBlockKey, apiWillstartBlock, OBJC_ASSOCIATION_COPY_NONATOMIC);
+}
+
+static char kAFNApiDidstartBlockKey;
+- (JJApiBlock)apiDidstartBlock {
+    return objc_getAssociatedObject(self, &kAFNApiDidstartBlockKey);
+}
+
+- (void)setApiDidstartBlock:(JJApiBlock)apiDidstartBlock {
+    objc_setAssociatedObject(self, &kAFNApiDidstartBlockKey, apiDidstartBlock, OBJC_ASSOCIATION_COPY_NONATOMIC);
+}
+
+
+static char kAFNApiWillHandleSuccessBlockKey;
+- (JJApiBlock)apiWillHandleSuccessBlock {
+    return objc_getAssociatedObject(self, &kAFNApiWillHandleSuccessBlockKey);
+}
+
+- (void)setApiWillHandleSuccessBlock:(JJApiBlock)apiWillHandleSuccessBlock {
+    objc_setAssociatedObject(self, &kAFNApiWillHandleSuccessBlockKey, apiWillHandleSuccessBlock, OBJC_ASSOCIATION_COPY_NONATOMIC);
+}
+
+
+static char kAFNApiDidHandleSuccessBlockKey;
+- (JJApiBlock)apiDidHandleSuccessBlock {
+    return objc_getAssociatedObject(self, &kAFNApiDidHandleSuccessBlockKey);
+}
+
+- (void)setApiDidHandleSuccessBlock:(JJApiBlock)apiDidHandleSuccessBlock {
+    objc_setAssociatedObject(self, &kAFNApiDidHandleSuccessBlockKey, apiDidHandleSuccessBlock, OBJC_ASSOCIATION_COPY_NONATOMIC);
+}
+
+
+static char kAFNApiWillHandleFailureBlockKey;
+- (JJApiBlock)apiWillHandleFailureBlock {
+    return objc_getAssociatedObject(self, &kAFNApiWillHandleFailureBlockKey);
+}
+
+- (void)setApiWillHandleFailureBlock:(JJApiBlock)apiWillHandleFailureBlock {
+    objc_setAssociatedObject(self, &kAFNApiWillHandleFailureBlockKey, apiWillHandleFailureBlock, OBJC_ASSOCIATION_COPY_NONATOMIC);
+}
+
+
+static char kAFNApiDidHandleFailureBlockKey;
+- (JJApiBlock)apiDidHandleFailureBlock {
+    return objc_getAssociatedObject(self, &kAFNApiDidHandleFailureBlockKey);
+}
+
+- (void)setApiDidHandleFailureBlock:(JJApiBlock)apiDidHandleFailureBlock {
+    objc_setAssociatedObject(self, &kAFNApiDidHandleFailureBlockKey, apiDidHandleFailureBlock, OBJC_ASSOCIATION_COPY_NONATOMIC);
+}
+
+static char kAFNApiWillCancelBlockKey;
+- (JJApiBlock)apiWillCancelBlock {
+    return objc_getAssociatedObject(self, &kAFNApiWillCancelBlockKey);
+}
+
+- (void)setApiWillCancelBlock:(JJApiBlock)apiWillCancelBlock {
+    objc_setAssociatedObject(self, &kAFNApiWillCancelBlockKey, apiWillCancelBlock, OBJC_ASSOCIATION_COPY_NONATOMIC);
+}
+
+static char kAFNApiDidCancelBlockKey;
+- (JJApiBlock)apiDidCancelBlock {
+    return objc_getAssociatedObject(self, &kAFNApiDidCancelBlockKey);
+}
+
+- (void)setApiDidCancelBlock:(JJApiBlock)apiDidCancelBlock {
+    objc_setAssociatedObject(self, &kAFNApiDidCancelBlockKey, apiDidCancelBlock, OBJC_ASSOCIATION_COPY_NONATOMIC);
+}
+
 
 
 @end

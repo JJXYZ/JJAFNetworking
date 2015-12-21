@@ -7,7 +7,27 @@
 //
 
 #import "JJAFNListApi.h"
+#import "JJAFNListInput.h"
 
 @implementation JJAFNListApi
+
+
+- (void)refreshData {
+//    if ([self.input isKindOfClass:[JJAFNListInput class]]) {
+//        JJAFNListInput *input = (JJAFNListInput *)self.input;
+//        input.page = 1;
+//    }
+    _page = 1;
+    [self start];
+}
+
+
+- (void)loadMoreData {
+    if ([self.input isKindOfClass:[JJAFNListInput class]]) {
+        JJAFNListInput *input = (JJAFNListInput *)self.input;
+        input.page = 1;
+    }
+    [self start];
+}
 
 @end
