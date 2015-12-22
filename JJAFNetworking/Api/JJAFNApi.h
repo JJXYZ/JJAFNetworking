@@ -107,7 +107,4 @@ typedef void(^JJApiBlock)(JJAFNApi *api);
 /** 取消请求 */
 - (void)cancel;
 
-/** 把block置nil来打破循环引用 */
-- (void)clearBlock;
-
 @end

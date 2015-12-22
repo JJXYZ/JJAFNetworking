@@ -7,11 +7,14 @@
 //
 
 #import "JJAFNApiManager.h"
+#import "AFDownloadRequestOperation.h"
 #import "AFNetworking.h"
 #import "JJAFN_ENUM.h"
 #import "JJAFNApi.h"
 #import "JJAFNApi+RewriteMethod.h"
 #import "JJAFNApi+HandleMethod.h"
+#import "JJAFNApi+DownLoad.h"
+#import "JJAFNApi+UpLoad.h"
 #import "JJAFNApi+Log.h"
 
 @interface JJAFNApiManager ()
@@ -117,8 +120,6 @@
     
     [self removeOperation:operation];
     
-    [api clearBlock];
-    
     [api didHandleSuccess];
 }
 
@@ -132,8 +133,6 @@
     [api handleFailure];
     
     [self removeOperation:operation];
-    
-    [api clearBlock];
     
     [api didHandleFailure];
 }
@@ -255,6 +254,33 @@
             [self handleFailureApi:api operation:operation];
         }];
     }
+    else if (method == JJAFNMethod_DOWNLOAD) {
+        if ([api targetPath].length) {
+            NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:[NSURL URLWithString:URLString] cachePolicy:NSURLRequestUseProtocolCachePolicy timeoutInterval:[api timeoutInterval]];
+            AFDownloadRequestOperation *downloadRequestOperation = [[AFDownloadRequestOperation alloc] initWithRequest:request targetPath:[api targetPath] shouldResume:[api shouldResume]];
+            [api.requestOperation setUploadProgressBlock:^(NSUInteger bytesWritten, long long totalBytesWritten, long long totalBytesExpectedToWrite) {
+                
+            }];
+            [downloadRequestOperation setProgressiveDownloadProgressBlock:api.progressiveDownloadProgressBlock];
+            [downloadRequestOperation setCompletionBlockWithSuccess:^(AFHTTPRequestOperation * _Nonnull operation, id  _Nonnull responseObject) {
+                [self handleSuccessApi:api operation:operation];
+            } failure:^(AFHTTPRequestOperation * _Nonnull operation, NSError * _Nonnull error) {
+                [self handleFailureApi:api operation:operation];
+            }];
+            api.requestOperation = downloadRequestOperation;
+            [self.manager.operationQueue addOperation:api.requestOperation];
+        }
+    }
+    else if (method == JJAFNMethod_UPLOAD) {
+        api.requestOperation = [self.manager POST:URLString parameters:parameters constructingBodyWithBlock:api.constructingBodyBlock success:^(AFHTTPRequestOperation * _Nonnull operation, id  _Nonnull responseObject) {
+            [self handleSuccessApi:api operation:operation];
+        } failure:^(AFHTTPRequestOperation * _Nullable operation, NSError * _Nonnull error) {
+            [self handleFailureApi:api operation:operation];
+        }];
+        [api.requestOperation setUploadProgressBlock:^(NSUInteger bytesWritten, long long totalBytesWritten, long long totalBytesExpectedToWrite) {
+            
+        }];
+    }
     
     /** api的优先级 */
     [self configQueuePriority:api];
@@ -271,8 +297,8 @@
     [api willCancel];
     
     [api.requestOperation cancel];
+    
     [self removeOperation:api.requestOperation];
-    [api clearBlock];
     
     [api didCancel];
 }

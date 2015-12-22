@@ -30,10 +30,6 @@
     [API_MANAGER cancelApi:self];
 }
 
-- (void)clearBlock {
-    self.apiSuccessBlock = nil;
-    self.apiFailureBlock = nil;
-}
 
 #pragma mark - Property
 

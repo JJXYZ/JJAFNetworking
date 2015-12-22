@@ -16,7 +16,9 @@ typedef NS_ENUM(NSInteger, JJAFNMethodType) {
     JJAFNMethod_HEAD,
     JJAFNMethod_PUT,
     JJAFNMethod_DELETE,
-    JJAFNMethod_PATCH
+    JJAFNMethod_PATCH,
+    JJAFNMethod_DOWNLOAD,
+    JJAFNMethod_UPLOAD,
 };
 
 /** 请求序列化方式 */

@@ -11,16 +11,20 @@
 
 
 /** pods */
-#import "AFDownloadRequestOperation.h"
 #import "AFNetworking.h"
+#import "AFDownloadRequestOperation.h"
 #import "MJExtension.h"
 
-/** core */
+/** Manager */
 #import "JJAFN_ENUM.h"
 #import "JJAFNApiManager.h"
+
+/** Api */
 #import "JJAFNApi.h"
 #import "JJAFNApi+RewriteMethod.h"
 #import "JJAFNApi+HandleMethod.h"
+#import "JJAFNApi+DownLoad.h"
+#import "JJAFNApi+UpLoad.h"
 #import "JJAFNInput.h"
 
 

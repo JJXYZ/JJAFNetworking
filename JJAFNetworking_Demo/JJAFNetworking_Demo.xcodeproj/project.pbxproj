@@ -20,9 +20,12 @@
 		69E627081C270FA9000B93A9 /* JJAFNApi+RewriteMethod.m in Sources */ = {isa = PBXBuildFile; fileRef = 69E627001C270FA9000B93A9 /* JJAFNApi+RewriteMethod.m */; };
 		69E627091C270FA9000B93A9 /* JJAFNApiManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 69E627021C270FA9000B93A9 /* JJAFNApiManager.m */; };
 		69E6270A1C270FA9000B93A9 /* JJAFNInput.m in Sources */ = {isa = PBXBuildFile; fileRef = 69E627041C270FA9000B93A9 /* JJAFNInput.m */; };
-		69E6270E1C270FF3000B93A9 /* JJAFNListApi.m in Sources */ = {isa = PBXBuildFile; fileRef = 69E6270D1C270FF3000B93A9 /* JJAFNListApi.m */; };
-		69E627111C2719E9000B93A9 /* JJAFNListInput.m in Sources */ = {isa = PBXBuildFile; fileRef = 69E627101C2719E9000B93A9 /* JJAFNListInput.m */; };
+		69E6270E1C270FF3000B93A9 /* JJAFNPageApi.m in Sources */ = {isa = PBXBuildFile; fileRef = 69E6270D1C270FF3000B93A9 /* JJAFNPageApi.m */; };
 		69E627141C271AAC000B93A9 /* JJDogApi.m in Sources */ = {isa = PBXBuildFile; fileRef = 69E627131C271AAC000B93A9 /* JJDogApi.m */; };
+		A33CB9901C28F31B00CB6A9D /* JJAFNInput+Page.m in Sources */ = {isa = PBXBuildFile; fileRef = A33CB98F1C28F31B00CB6A9D /* JJAFNInput+Page.m */; };
+		A33CB9961C28FE4C00CB6A9D /* JJAFNApi+DownLoad.m in Sources */ = {isa = PBXBuildFile; fileRef = A33CB9951C28FE4C00CB6A9D /* JJAFNApi+DownLoad.m */; };
+		A33CB9991C293AB600CB6A9D /* JJAFNApi+UpLoad.m in Sources */ = {isa = PBXBuildFile; fileRef = A33CB9981C293AB600CB6A9D /* JJAFNApi+UpLoad.m */; };
+		A33CB99C1C29417A00CB6A9D /* JJImageApi.m in Sources */ = {isa = PBXBuildFile; fileRef = A33CB99B1C29417A00CB6A9D /* JJImageApi.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -51,12 +54,18 @@
 		69E627021C270FA9000B93A9 /* JJAFNApiManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JJAFNApiManager.m; sourceTree = "<group>"; };
 		69E627031C270FA9000B93A9 /* JJAFNInput.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JJAFNInput.h; sourceTree = "<group>"; };
 		69E627041C270FA9000B93A9 /* JJAFNInput.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JJAFNInput.m; sourceTree = "<group>"; };
-		69E6270C1C270FF3000B93A9 /* JJAFNListApi.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JJAFNListApi.h; sourceTree = "<group>"; };
-		69E6270D1C270FF3000B93A9 /* JJAFNListApi.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JJAFNListApi.m; sourceTree = "<group>"; };
-		69E6270F1C2719E9000B93A9 /* JJAFNListInput.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JJAFNListInput.h; sourceTree = "<group>"; };
-		69E627101C2719E9000B93A9 /* JJAFNListInput.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JJAFNListInput.m; sourceTree = "<group>"; };
+		69E6270C1C270FF3000B93A9 /* JJAFNPageApi.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JJAFNPageApi.h; sourceTree = "<group>"; };
+		69E6270D1C270FF3000B93A9 /* JJAFNPageApi.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JJAFNPageApi.m; sourceTree = "<group>"; };
 		69E627121C271AAC000B93A9 /* JJDogApi.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JJDogApi.h; sourceTree = "<group>"; };
 		69E627131C271AAC000B93A9 /* JJDogApi.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JJDogApi.m; sourceTree = "<group>"; };
+		A33CB98E1C28F31B00CB6A9D /* JJAFNInput+Page.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "JJAFNInput+Page.h"; sourceTree = "<group>"; };
+		A33CB98F1C28F31B00CB6A9D /* JJAFNInput+Page.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "JJAFNInput+Page.m"; sourceTree = "<group>"; };
+		A33CB9941C28FE4C00CB6A9D /* JJAFNApi+DownLoad.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "JJAFNApi+DownLoad.h"; sourceTree = "<group>"; };
+		A33CB9951C28FE4C00CB6A9D /* JJAFNApi+DownLoad.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "JJAFNApi+DownLoad.m"; sourceTree = "<group>"; };
+		A33CB9971C293AB600CB6A9D /* JJAFNApi+UpLoad.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "JJAFNApi+UpLoad.h"; sourceTree = "<group>"; };
+		A33CB9981C293AB600CB6A9D /* JJAFNApi+UpLoad.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "JJAFNApi+UpLoad.m"; sourceTree = "<group>"; };
+		A33CB99A1C29417A00CB6A9D /* JJImageApi.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JJImageApi.h; sourceTree = "<group>"; };
+		A33CB99B1C29417A00CB6A9D /* JJImageApi.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JJImageApi.m; sourceTree = "<group>"; };
 		BB9AAB02CB3504BF2E4FFB90 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		C36210885C73C98C1A7E635B /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -108,6 +117,8 @@
 				695403F31C1720FF00B777EF /* AppDelegate.m */,
 				695403F51C1720FF00B777EF /* ViewController.h */,
 				695403F61C1720FF00B777EF /* ViewController.m */,
+				A33CB99A1C29417A00CB6A9D /* JJImageApi.h */,
+				A33CB99B1C29417A00CB6A9D /* JJImageApi.m */,
 				69E627121C271AAC000B93A9 /* JJDogApi.h */,
 				69E627131C271AAC000B93A9 /* JJDogApi.m */,
 				695403F81C1720FF00B777EF /* Main.storyboard */,
@@ -137,15 +148,15 @@
 			path = Manager;
 			sourceTree = "<group>";
 		};
-		69E6270B1C270FBB000B93A9 /* ListApi */ = {
+		69E6270B1C270FBB000B93A9 /* PageApi */ = {
 			isa = PBXGroup;
 			children = (
-				69E6270F1C2719E9000B93A9 /* JJAFNListInput.h */,
-				69E627101C2719E9000B93A9 /* JJAFNListInput.m */,
-				69E6270C1C270FF3000B93A9 /* JJAFNListApi.h */,
-				69E6270D1C270FF3000B93A9 /* JJAFNListApi.m */,
+				A33CB98E1C28F31B00CB6A9D /* JJAFNInput+Page.h */,
+				A33CB98F1C28F31B00CB6A9D /* JJAFNInput+Page.m */,
+				69E6270C1C270FF3000B93A9 /* JJAFNPageApi.h */,
+				69E6270D1C270FF3000B93A9 /* JJAFNPageApi.m */,
 			);
-			path = ListApi;
+			path = PageApi;
 			sourceTree = "<group>";
 		};
 		69E627151C271E05000B93A9 /* Api */ = {
@@ -159,6 +170,10 @@
 				69E627001C270FA9000B93A9 /* JJAFNApi+RewriteMethod.m */,
 				69E626FB1C270FA9000B93A9 /* JJAFNApi+HandleMethod.h */,
 				69E626FC1C270FA9000B93A9 /* JJAFNApi+HandleMethod.m */,
+				A33CB9941C28FE4C00CB6A9D /* JJAFNApi+DownLoad.h */,
+				A33CB9951C28FE4C00CB6A9D /* JJAFNApi+DownLoad.m */,
+				A33CB9971C293AB600CB6A9D /* JJAFNApi+UpLoad.h */,
+				A33CB9981C293AB600CB6A9D /* JJAFNApi+UpLoad.m */,
 				69E626FD1C270FA9000B93A9 /* JJAFNApi+Log.h */,
 				69E626FE1C270FA9000B93A9 /* JJAFNApi+Log.m */,
 			);
@@ -171,7 +186,7 @@
 				693D64551C2313E9003F5964 /* JJAFNetworking.h */,
 				69E626F71C270F4F000B93A9 /* Manager */,
 				69E627151C271E05000B93A9 /* Api */,
-				69E6270B1C270FBB000B93A9 /* ListApi */,
+				69E6270B1C270FBB000B93A9 /* PageApi */,
 			);
 			name = JJAFNetworking;
 			path = ../../JJAFNetworking;
@@ -307,17 +322,20 @@
 			buildActionMask = 2147483647;
 			files = (
 				69E627061C270FA9000B93A9 /* JJAFNApi+HandleMethod.m in Sources */,
+				A33CB9991C293AB600CB6A9D /* JJAFNApi+UpLoad.m in Sources */,
 				69E627141C271AAC000B93A9 /* JJDogApi.m in Sources */,
 				69E627051C270FA9000B93A9 /* JJAFNApi.m in Sources */,
 				69E627091C270FA9000B93A9 /* JJAFNApiManager.m in Sources */,
-				69E627111C2719E9000B93A9 /* JJAFNListInput.m in Sources */,
+				A33CB99C1C29417A00CB6A9D /* JJImageApi.m in Sources */,
 				695403F71C1720FF00B777EF /* ViewController.m in Sources */,
 				69E627081C270FA9000B93A9 /* JJAFNApi+RewriteMethod.m in Sources */,
 				69E627071C270FA9000B93A9 /* JJAFNApi+Log.m in Sources */,
 				69E6270A1C270FA9000B93A9 /* JJAFNInput.m in Sources */,
 				695403F41C1720FF00B777EF /* AppDelegate.m in Sources */,
-				69E6270E1C270FF3000B93A9 /* JJAFNListApi.m in Sources */,
+				69E6270E1C270FF3000B93A9 /* JJAFNPageApi.m in Sources */,
 				695403F11C1720FF00B777EF /* main.m in Sources */,
+				A33CB9901C28F31B00CB6A9D /* JJAFNInput+Page.m in Sources */,
+				A33CB9961C28FE4C00CB6A9D /* JJAFNApi+DownLoad.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
