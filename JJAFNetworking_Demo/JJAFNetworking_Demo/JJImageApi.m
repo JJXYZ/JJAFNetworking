@@ -11,8 +11,8 @@
 
 @implementation JJImageApi
 
-- (JJAFNMethodType)AFNMethod {
-    return JJAFNMethod_UPLOAD;
+- (JJApiMethodType)AFNMethod {
+    return JJApiMethod_UPLOAD;
 }
 
 - (NSString *)URLString {
@@ -20,7 +20,7 @@
 }
 
 #if 0
-- (AFConstructingBodyBlock)constructingBodyBlock {
+- (JJApiConstructingBodyBlock)constructingBodyBlock {
     __weak typeof(self) weakSelf = self;
     return ^(id<AFMultipartFormData> formData) {
         NSData *data = UIImagePNGRepresentation(weakSelf.image);
@@ -30,7 +30,7 @@
     };
 }
 #else
-- (AFConstructingBodyBlock)constructingBodyBlock {
+- (JJApiConstructingBodyBlock)constructingBodyBlock {
     __weak typeof(self) weakSelf = self;
     return ^(id<AFMultipartFormData> formData) {
         for (NSInteger i = 0; i < weakSelf.imageArr.count ; i++) {

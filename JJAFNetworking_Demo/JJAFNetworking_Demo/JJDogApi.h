@@ -6,8 +6,8 @@
 //  Copyright © 2015年 JJ. All rights reserved.
 //
 
-#import "JJAFNApi.h"
+#import "JJApi.h"
 
-@interface JJDogApi : JJAFNApi
+@interface JJDogApi : JJApi
 
 @end

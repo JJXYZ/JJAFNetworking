@@ -10,14 +10,14 @@
 
 
 
-#define API_MANAGER [JJAFNApiManager sharedInstance]
+#define API_MANAGER [JJApiManager sharedInstance]
 
-@class JJAFNApi;
-@interface JJAFNApiManager : NSObject
+@class JJApi;
+@interface JJApiManager : NSObject
 
 #pragma mark - Lifecycle
 
-+ (JJAFNApiManager *)sharedInstance;
++ (JJApiManager *)sharedInstance;
 
 #pragma mark - Init
 
@@ -33,10 +33,10 @@
 - (NSInteger)curOperationCount;
 
 /** 发起请求 */
-- (void)startApi:(JJAFNApi *)api;
+- (void)startApi:(JJApi *)api;
 
 /** 取消请求 */
-- (void)cancelApi:(JJAFNApi *)api;
+- (void)cancelApi:(JJApi *)api;
 
 /** 取消所有的请求 */
 - (void)cancelAllApi;

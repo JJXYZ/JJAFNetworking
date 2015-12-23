@@ -6,9 +6,9 @@
 //  Copyright © 2015年 JJ. All rights reserved.
 //
 
-#import "JJAFNApi.h"
+#import "JJApi.h"
 
-@interface JJImageApi : JJAFNApi
+@interface JJImageApi : JJApi
 
 @property (nonatomic, strong) UIImage *image;
 

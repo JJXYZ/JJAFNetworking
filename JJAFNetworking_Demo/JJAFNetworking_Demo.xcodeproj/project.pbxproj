@@ -14,58 +14,65 @@
 		695403FA1C1720FF00B777EF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 695403F81C1720FF00B777EF /* Main.storyboard */; };
 		695403FC1C1720FF00B777EF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 695403FB1C1720FF00B777EF /* Assets.xcassets */; };
 		695403FF1C1720FF00B777EF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 695403FD1C1720FF00B777EF /* LaunchScreen.storyboard */; };
-		69E627051C270FA9000B93A9 /* JJAFNApi.m in Sources */ = {isa = PBXBuildFile; fileRef = 69E626FA1C270FA9000B93A9 /* JJAFNApi.m */; };
-		69E627061C270FA9000B93A9 /* JJAFNApi+HandleMethod.m in Sources */ = {isa = PBXBuildFile; fileRef = 69E626FC1C270FA9000B93A9 /* JJAFNApi+HandleMethod.m */; };
-		69E627071C270FA9000B93A9 /* JJAFNApi+Log.m in Sources */ = {isa = PBXBuildFile; fileRef = 69E626FE1C270FA9000B93A9 /* JJAFNApi+Log.m */; };
-		69E627081C270FA9000B93A9 /* JJAFNApi+RewriteMethod.m in Sources */ = {isa = PBXBuildFile; fileRef = 69E627001C270FA9000B93A9 /* JJAFNApi+RewriteMethod.m */; };
-		69E627091C270FA9000B93A9 /* JJAFNApiManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 69E627021C270FA9000B93A9 /* JJAFNApiManager.m */; };
-		69E6270A1C270FA9000B93A9 /* JJAFNInput.m in Sources */ = {isa = PBXBuildFile; fileRef = 69E627041C270FA9000B93A9 /* JJAFNInput.m */; };
-		69E6270E1C270FF3000B93A9 /* JJAFNPageApi.m in Sources */ = {isa = PBXBuildFile; fileRef = 69E6270D1C270FF3000B93A9 /* JJAFNPageApi.m */; };
+		69E627051C270FA9000B93A9 /* JJApi.m in Sources */ = {isa = PBXBuildFile; fileRef = 69E626FA1C270FA9000B93A9 /* JJApi.m */; };
+		69E627061C270FA9000B93A9 /* JJApi+HandleMethod.m in Sources */ = {isa = PBXBuildFile; fileRef = 69E626FC1C270FA9000B93A9 /* JJApi+HandleMethod.m */; };
+		69E627071C270FA9000B93A9 /* JJApi+Log.m in Sources */ = {isa = PBXBuildFile; fileRef = 69E626FE1C270FA9000B93A9 /* JJApi+Log.m */; };
+		69E627081C270FA9000B93A9 /* JJApi+RewriteMethod.m in Sources */ = {isa = PBXBuildFile; fileRef = 69E627001C270FA9000B93A9 /* JJApi+RewriteMethod.m */; };
+		69E627091C270FA9000B93A9 /* JJApiManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 69E627021C270FA9000B93A9 /* JJApiManager.m */; };
+		69E6270A1C270FA9000B93A9 /* JJApiInput.m in Sources */ = {isa = PBXBuildFile; fileRef = 69E627041C270FA9000B93A9 /* JJApiInput.m */; };
+		69E6270E1C270FF3000B93A9 /* JJPageApi.m in Sources */ = {isa = PBXBuildFile; fileRef = 69E6270D1C270FF3000B93A9 /* JJPageApi.m */; };
 		69E627141C271AAC000B93A9 /* JJDogApi.m in Sources */ = {isa = PBXBuildFile; fileRef = 69E627131C271AAC000B93A9 /* JJDogApi.m */; };
-		A33CB9901C28F31B00CB6A9D /* JJAFNInput+Page.m in Sources */ = {isa = PBXBuildFile; fileRef = A33CB98F1C28F31B00CB6A9D /* JJAFNInput+Page.m */; };
-		A33CB9961C28FE4C00CB6A9D /* JJAFNApi+DownLoad.m in Sources */ = {isa = PBXBuildFile; fileRef = A33CB9951C28FE4C00CB6A9D /* JJAFNApi+DownLoad.m */; };
-		A33CB9991C293AB600CB6A9D /* JJAFNApi+UpLoad.m in Sources */ = {isa = PBXBuildFile; fileRef = A33CB9981C293AB600CB6A9D /* JJAFNApi+UpLoad.m */; };
+		A33CB9901C28F31B00CB6A9D /* JJApiInput+Page.m in Sources */ = {isa = PBXBuildFile; fileRef = A33CB98F1C28F31B00CB6A9D /* JJApiInput+Page.m */; };
+		A33CB9961C28FE4C00CB6A9D /* JJApi+DownLoad.m in Sources */ = {isa = PBXBuildFile; fileRef = A33CB9951C28FE4C00CB6A9D /* JJApi+DownLoad.m */; };
+		A33CB9991C293AB600CB6A9D /* JJApi+UpLoad.m in Sources */ = {isa = PBXBuildFile; fileRef = A33CB9981C293AB600CB6A9D /* JJApi+UpLoad.m */; };
 		A33CB99C1C29417A00CB6A9D /* JJImageApi.m in Sources */ = {isa = PBXBuildFile; fileRef = A33CB99B1C29417A00CB6A9D /* JJImageApi.m */; };
+		A33F4A4C1C2A2FE300C4999C /* JJGroupApi.m in Sources */ = {isa = PBXBuildFile; fileRef = A33F4A4B1C2A2FE300C4999C /* JJGroupApi.m */; };
+		A33F4A501C2A308500C4999C /* JJListApi.m in Sources */ = {isa = PBXBuildFile; fileRef = A33F4A4F1C2A308500C4999C /* JJListApi.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		6187B52B08E29C8C5ACE4425 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
-		693D64551C2313E9003F5964 /* JJAFNetworking.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JJAFNetworking.h; sourceTree = "<group>"; };
+		693D64551C2313E9003F5964 /* JJAFNetworking.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; path = JJAFNetworking.h; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
 		695403EC1C1720FF00B777EF /* JJAFNetworking_Demo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JJAFNetworking_Demo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		695403F01C1720FF00B777EF /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		695403F21C1720FF00B777EF /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
-		695403F31C1720FF00B777EF /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		695403F21C1720FF00B777EF /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; lineEnding = 0; path = AppDelegate.h; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
+		695403F31C1720FF00B777EF /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = AppDelegate.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
 		695403F51C1720FF00B777EF /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		695403F61C1720FF00B777EF /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		695403F91C1720FF00B777EF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		695403FB1C1720FF00B777EF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		695403FE1C1720FF00B777EF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		695404001C1720FF00B777EF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		69E626F81C270FA9000B93A9 /* JJAFN_ENUM.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JJAFN_ENUM.h; sourceTree = "<group>"; };
-		69E626F91C270FA9000B93A9 /* JJAFNApi.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JJAFNApi.h; sourceTree = "<group>"; };
-		69E626FA1C270FA9000B93A9 /* JJAFNApi.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JJAFNApi.m; sourceTree = "<group>"; };
-		69E626FB1C270FA9000B93A9 /* JJAFNApi+HandleMethod.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "JJAFNApi+HandleMethod.h"; sourceTree = "<group>"; };
-		69E626FC1C270FA9000B93A9 /* JJAFNApi+HandleMethod.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "JJAFNApi+HandleMethod.m"; sourceTree = "<group>"; };
-		69E626FD1C270FA9000B93A9 /* JJAFNApi+Log.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "JJAFNApi+Log.h"; sourceTree = "<group>"; };
-		69E626FE1C270FA9000B93A9 /* JJAFNApi+Log.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "JJAFNApi+Log.m"; sourceTree = "<group>"; };
-		69E626FF1C270FA9000B93A9 /* JJAFNApi+RewriteMethod.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "JJAFNApi+RewriteMethod.h"; sourceTree = "<group>"; };
-		69E627001C270FA9000B93A9 /* JJAFNApi+RewriteMethod.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "JJAFNApi+RewriteMethod.m"; sourceTree = "<group>"; };
-		69E627011C270FA9000B93A9 /* JJAFNApiManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JJAFNApiManager.h; sourceTree = "<group>"; };
-		69E627021C270FA9000B93A9 /* JJAFNApiManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JJAFNApiManager.m; sourceTree = "<group>"; };
-		69E627031C270FA9000B93A9 /* JJAFNInput.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JJAFNInput.h; sourceTree = "<group>"; };
-		69E627041C270FA9000B93A9 /* JJAFNInput.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JJAFNInput.m; sourceTree = "<group>"; };
-		69E6270C1C270FF3000B93A9 /* JJAFNPageApi.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JJAFNPageApi.h; sourceTree = "<group>"; };
-		69E6270D1C270FF3000B93A9 /* JJAFNPageApi.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JJAFNPageApi.m; sourceTree = "<group>"; };
+		69E626F81C270FA9000B93A9 /* JJApi_ENUM.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JJApi_ENUM.h; sourceTree = "<group>"; };
+		69E626F91C270FA9000B93A9 /* JJApi.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JJApi.h; sourceTree = "<group>"; };
+		69E626FA1C270FA9000B93A9 /* JJApi.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JJApi.m; sourceTree = "<group>"; };
+		69E626FB1C270FA9000B93A9 /* JJApi+HandleMethod.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "JJApi+HandleMethod.h"; sourceTree = "<group>"; };
+		69E626FC1C270FA9000B93A9 /* JJApi+HandleMethod.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "JJApi+HandleMethod.m"; sourceTree = "<group>"; };
+		69E626FD1C270FA9000B93A9 /* JJApi+Log.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "JJApi+Log.h"; sourceTree = "<group>"; };
+		69E626FE1C270FA9000B93A9 /* JJApi+Log.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "JJApi+Log.m"; sourceTree = "<group>"; };
+		69E626FF1C270FA9000B93A9 /* JJApi+RewriteMethod.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "JJApi+RewriteMethod.h"; sourceTree = "<group>"; };
+		69E627001C270FA9000B93A9 /* JJApi+RewriteMethod.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "JJApi+RewriteMethod.m"; sourceTree = "<group>"; };
+		69E627011C270FA9000B93A9 /* JJApiManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JJApiManager.h; sourceTree = "<group>"; };
+		69E627021C270FA9000B93A9 /* JJApiManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JJApiManager.m; sourceTree = "<group>"; };
+		69E627031C270FA9000B93A9 /* JJApiInput.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; path = JJApiInput.h; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
+		69E627041C270FA9000B93A9 /* JJApiInput.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = JJApiInput.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
+		69E6270C1C270FF3000B93A9 /* JJPageApi.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JJPageApi.h; sourceTree = "<group>"; };
+		69E6270D1C270FF3000B93A9 /* JJPageApi.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JJPageApi.m; sourceTree = "<group>"; };
 		69E627121C271AAC000B93A9 /* JJDogApi.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JJDogApi.h; sourceTree = "<group>"; };
 		69E627131C271AAC000B93A9 /* JJDogApi.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JJDogApi.m; sourceTree = "<group>"; };
-		A33CB98E1C28F31B00CB6A9D /* JJAFNInput+Page.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "JJAFNInput+Page.h"; sourceTree = "<group>"; };
-		A33CB98F1C28F31B00CB6A9D /* JJAFNInput+Page.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "JJAFNInput+Page.m"; sourceTree = "<group>"; };
-		A33CB9941C28FE4C00CB6A9D /* JJAFNApi+DownLoad.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "JJAFNApi+DownLoad.h"; sourceTree = "<group>"; };
-		A33CB9951C28FE4C00CB6A9D /* JJAFNApi+DownLoad.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "JJAFNApi+DownLoad.m"; sourceTree = "<group>"; };
-		A33CB9971C293AB600CB6A9D /* JJAFNApi+UpLoad.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "JJAFNApi+UpLoad.h"; sourceTree = "<group>"; };
-		A33CB9981C293AB600CB6A9D /* JJAFNApi+UpLoad.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "JJAFNApi+UpLoad.m"; sourceTree = "<group>"; };
+		A33CB98E1C28F31B00CB6A9D /* JJApiInput+Page.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "JJApiInput+Page.h"; sourceTree = "<group>"; };
+		A33CB98F1C28F31B00CB6A9D /* JJApiInput+Page.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "JJApiInput+Page.m"; sourceTree = "<group>"; };
+		A33CB9941C28FE4C00CB6A9D /* JJApi+DownLoad.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "JJApi+DownLoad.h"; sourceTree = "<group>"; };
+		A33CB9951C28FE4C00CB6A9D /* JJApi+DownLoad.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "JJApi+DownLoad.m"; sourceTree = "<group>"; };
+		A33CB9971C293AB600CB6A9D /* JJApi+UpLoad.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "JJApi+UpLoad.h"; sourceTree = "<group>"; };
+		A33CB9981C293AB600CB6A9D /* JJApi+UpLoad.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "JJApi+UpLoad.m"; sourceTree = "<group>"; };
 		A33CB99A1C29417A00CB6A9D /* JJImageApi.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JJImageApi.h; sourceTree = "<group>"; };
 		A33CB99B1C29417A00CB6A9D /* JJImageApi.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JJImageApi.m; sourceTree = "<group>"; };
+		A33F4A4A1C2A2FE300C4999C /* JJGroupApi.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JJGroupApi.h; sourceTree = "<group>"; };
+		A33F4A4B1C2A2FE300C4999C /* JJGroupApi.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JJGroupApi.m; sourceTree = "<group>"; };
+		A33F4A4E1C2A308500C4999C /* JJListApi.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JJListApi.h; sourceTree = "<group>"; };
+		A33F4A4F1C2A308500C4999C /* JJListApi.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JJListApi.m; sourceTree = "<group>"; };
+		A33F4A511C2A35F500C4999C /* JJApiDefine.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JJApiDefine.h; sourceTree = "<group>"; };
 		BB9AAB02CB3504BF2E4FFB90 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		C36210885C73C98C1A7E635B /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -141,9 +148,10 @@
 		69E626F71C270F4F000B93A9 /* Manager */ = {
 			isa = PBXGroup;
 			children = (
-				69E626F81C270FA9000B93A9 /* JJAFN_ENUM.h */,
-				69E627011C270FA9000B93A9 /* JJAFNApiManager.h */,
-				69E627021C270FA9000B93A9 /* JJAFNApiManager.m */,
+				A33F4A511C2A35F500C4999C /* JJApiDefine.h */,
+				69E626F81C270FA9000B93A9 /* JJApi_ENUM.h */,
+				69E627011C270FA9000B93A9 /* JJApiManager.h */,
+				69E627021C270FA9000B93A9 /* JJApiManager.m */,
 			);
 			path = Manager;
 			sourceTree = "<group>";
@@ -151,10 +159,10 @@
 		69E6270B1C270FBB000B93A9 /* PageApi */ = {
 			isa = PBXGroup;
 			children = (
-				A33CB98E1C28F31B00CB6A9D /* JJAFNInput+Page.h */,
-				A33CB98F1C28F31B00CB6A9D /* JJAFNInput+Page.m */,
-				69E6270C1C270FF3000B93A9 /* JJAFNPageApi.h */,
-				69E6270D1C270FF3000B93A9 /* JJAFNPageApi.m */,
+				A33CB98E1C28F31B00CB6A9D /* JJApiInput+Page.h */,
+				A33CB98F1C28F31B00CB6A9D /* JJApiInput+Page.m */,
+				69E6270C1C270FF3000B93A9 /* JJPageApi.h */,
+				69E6270D1C270FF3000B93A9 /* JJPageApi.m */,
 			);
 			path = PageApi;
 			sourceTree = "<group>";
@@ -162,20 +170,20 @@
 		69E627151C271E05000B93A9 /* Api */ = {
 			isa = PBXGroup;
 			children = (
-				69E627031C270FA9000B93A9 /* JJAFNInput.h */,
-				69E627041C270FA9000B93A9 /* JJAFNInput.m */,
-				69E626F91C270FA9000B93A9 /* JJAFNApi.h */,
-				69E626FA1C270FA9000B93A9 /* JJAFNApi.m */,
-				69E626FF1C270FA9000B93A9 /* JJAFNApi+RewriteMethod.h */,
-				69E627001C270FA9000B93A9 /* JJAFNApi+RewriteMethod.m */,
-				69E626FB1C270FA9000B93A9 /* JJAFNApi+HandleMethod.h */,
-				69E626FC1C270FA9000B93A9 /* JJAFNApi+HandleMethod.m */,
-				A33CB9941C28FE4C00CB6A9D /* JJAFNApi+DownLoad.h */,
-				A33CB9951C28FE4C00CB6A9D /* JJAFNApi+DownLoad.m */,
-				A33CB9971C293AB600CB6A9D /* JJAFNApi+UpLoad.h */,
-				A33CB9981C293AB600CB6A9D /* JJAFNApi+UpLoad.m */,
-				69E626FD1C270FA9000B93A9 /* JJAFNApi+Log.h */,
-				69E626FE1C270FA9000B93A9 /* JJAFNApi+Log.m */,
+				69E627031C270FA9000B93A9 /* JJApiInput.h */,
+				69E627041C270FA9000B93A9 /* JJApiInput.m */,
+				69E626F91C270FA9000B93A9 /* JJApi.h */,
+				69E626FA1C270FA9000B93A9 /* JJApi.m */,
+				69E626FF1C270FA9000B93A9 /* JJApi+RewriteMethod.h */,
+				69E627001C270FA9000B93A9 /* JJApi+RewriteMethod.m */,
+				69E626FB1C270FA9000B93A9 /* JJApi+HandleMethod.h */,
+				69E626FC1C270FA9000B93A9 /* JJApi+HandleMethod.m */,
+				A33CB9941C28FE4C00CB6A9D /* JJApi+DownLoad.h */,
+				A33CB9951C28FE4C00CB6A9D /* JJApi+DownLoad.m */,
+				A33CB9971C293AB600CB6A9D /* JJApi+UpLoad.h */,
+				A33CB9981C293AB600CB6A9D /* JJApi+UpLoad.m */,
+				69E626FD1C270FA9000B93A9 /* JJApi+Log.h */,
+				69E626FE1C270FA9000B93A9 /* JJApi+Log.m */,
 			);
 			path = Api;
 			sourceTree = "<group>";
@@ -184,12 +192,32 @@
 			isa = PBXGroup;
 			children = (
 				693D64551C2313E9003F5964 /* JJAFNetworking.h */,
-				69E626F71C270F4F000B93A9 /* Manager */,
 				69E627151C271E05000B93A9 /* Api */,
+				A33F4A491C2A2F5100C4999C /* GroupApi */,
+				A33F4A4D1C2A305400C4999C /* ListApi */,
+				69E626F71C270F4F000B93A9 /* Manager */,
 				69E6270B1C270FBB000B93A9 /* PageApi */,
 			);
 			name = JJAFNetworking;
 			path = ../../JJAFNetworking;
+			sourceTree = "<group>";
+		};
+		A33F4A491C2A2F5100C4999C /* GroupApi */ = {
+			isa = PBXGroup;
+			children = (
+				A33F4A4A1C2A2FE300C4999C /* JJGroupApi.h */,
+				A33F4A4B1C2A2FE300C4999C /* JJGroupApi.m */,
+			);
+			path = GroupApi;
+			sourceTree = "<group>";
+		};
+		A33F4A4D1C2A305400C4999C /* ListApi */ = {
+			isa = PBXGroup;
+			children = (
+				A33F4A4E1C2A308500C4999C /* JJListApi.h */,
+				A33F4A4F1C2A308500C4999C /* JJListApi.m */,
+			);
+			path = ListApi;
 			sourceTree = "<group>";
 		};
 		A678AC9FB369179891B7B816 /* Frameworks */ = {
@@ -321,21 +349,23 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				69E627061C270FA9000B93A9 /* JJAFNApi+HandleMethod.m in Sources */,
-				A33CB9991C293AB600CB6A9D /* JJAFNApi+UpLoad.m in Sources */,
+				69E627061C270FA9000B93A9 /* JJApi+HandleMethod.m in Sources */,
+				A33CB9991C293AB600CB6A9D /* JJApi+UpLoad.m in Sources */,
+				A33F4A4C1C2A2FE300C4999C /* JJGroupApi.m in Sources */,
 				69E627141C271AAC000B93A9 /* JJDogApi.m in Sources */,
-				69E627051C270FA9000B93A9 /* JJAFNApi.m in Sources */,
-				69E627091C270FA9000B93A9 /* JJAFNApiManager.m in Sources */,
+				69E627051C270FA9000B93A9 /* JJApi.m in Sources */,
+				69E627091C270FA9000B93A9 /* JJApiManager.m in Sources */,
 				A33CB99C1C29417A00CB6A9D /* JJImageApi.m in Sources */,
 				695403F71C1720FF00B777EF /* ViewController.m in Sources */,
-				69E627081C270FA9000B93A9 /* JJAFNApi+RewriteMethod.m in Sources */,
-				69E627071C270FA9000B93A9 /* JJAFNApi+Log.m in Sources */,
-				69E6270A1C270FA9000B93A9 /* JJAFNInput.m in Sources */,
+				69E627081C270FA9000B93A9 /* JJApi+RewriteMethod.m in Sources */,
+				69E627071C270FA9000B93A9 /* JJApi+Log.m in Sources */,
+				69E6270A1C270FA9000B93A9 /* JJApiInput.m in Sources */,
 				695403F41C1720FF00B777EF /* AppDelegate.m in Sources */,
-				69E6270E1C270FF3000B93A9 /* JJAFNPageApi.m in Sources */,
+				69E6270E1C270FF3000B93A9 /* JJPageApi.m in Sources */,
 				695403F11C1720FF00B777EF /* main.m in Sources */,
-				A33CB9901C28F31B00CB6A9D /* JJAFNInput+Page.m in Sources */,
-				A33CB9961C28FE4C00CB6A9D /* JJAFNApi+DownLoad.m in Sources */,
+				A33CB9901C28F31B00CB6A9D /* JJApiInput+Page.m in Sources */,
+				A33CB9961C28FE4C00CB6A9D /* JJApi+DownLoad.m in Sources */,
+				A33F4A501C2A308500C4999C /* JJListApi.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -1,5 +1,5 @@
 //
-//  JJAFNListApi.h
+//  JJPageApi.h
 //  JJAFNetworking_Demo
 //
 //  Created by Jay on 15/12/21.
@@ -13,26 +13,26 @@
  */
 
 
-#import "JJAFNApi.h"
+#import "JJApi.h"
 
-@class JJAFNPageApi;
+@class JJPageApi;
 
-@protocol JJAFNPageApiDelegate <JJApiDelegate>
+@protocol JJPageApiDelegate <JJApiDelegate>
 
 @optional
 
 /** 请求更多成功 */
-- (void)apiMoreSuccess:(JJAFNPageApi *)api;
+- (void)apiMoreSuccess:(JJPageApi *)api;
 
 /** 请求更多失败 */
-- (void)apiMoreFailed:(JJAFNPageApi *)api;
+- (void)apiMoreFailed:(JJPageApi *)api;
 
 @end
 
-@interface JJAFNPageApi : JJAFNApi
+@interface JJPageApi : JJApi
 
 /** 代理 */
-@property (nonatomic, weak) id<JJAFNPageApiDelegate> delegate;
+@property (nonatomic, weak) id<JJPageApiDelegate> delegate;
 
 /** 当前的页数 */
 @property (nonatomic, assign, readonly) NSUInteger page;

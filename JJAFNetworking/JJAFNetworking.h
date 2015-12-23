@@ -16,16 +16,16 @@
 #import "MJExtension.h"
 
 /** Manager */
-#import "JJAFN_ENUM.h"
-#import "JJAFNApiManager.h"
+#import "JJApi_ENUM.h"
+#import "JJApiManager.h"
 
 /** Api */
-#import "JJAFNApi.h"
-#import "JJAFNApi+RewriteMethod.h"
-#import "JJAFNApi+HandleMethod.h"
-#import "JJAFNApi+DownLoad.h"
-#import "JJAFNApi+UpLoad.h"
-#import "JJAFNInput.h"
+#import "JJApi.h"
+#import "JJApi+RewriteMethod.h"
+#import "JJApi+HandleMethod.h"
+#import "JJApi+DownLoad.h"
+#import "JJApi+UpLoad.h"
+#import "JJApiInput.h"
 
 
 #endif /* JJAFNetworking_h */

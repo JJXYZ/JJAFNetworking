@@ -1,14 +1,14 @@
 //
-//  JJAFNApi+HandleMethod.h
+//  JJApi+HandleMethod.h
 //  JJAFNetworking_Demo
 //
 //  Created by Jay on 15/12/17.
 //  Copyright © 2015年 JJ. All rights reserved.
 //
 
-#import "JJAFNApi.h"
+#import "JJApi.h"
 
-@interface JJAFNApi (HandleMethod)
+@interface JJApi (HandleMethod)
 
 #pragma mark - Property
 

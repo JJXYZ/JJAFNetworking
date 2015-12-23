@@ -1,15 +1,15 @@
 //
-//  JJAFNInput+Page.m
+//  JJApiInput+Page.m
 //  JJAFNetworking_Demo
 //
 //  Created by Jay on 15/12/22.
 //  Copyright © 2015年 JJ. All rights reserved.
 //
 
-#import "JJAFNInput+Page.h"
+#import "JJApiInput+Page.h"
 #import <objc/runtime.h>
 
-@implementation JJAFNInput (Page)
+@implementation JJApiInput (Page)
 
 #pragma mark - Property
 

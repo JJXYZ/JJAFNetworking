@@ -1,14 +1,14 @@
 //
-//  JJAFNInput+Page.h
+//  JJApiInput+Page.h
 //  JJAFNetworking_Demo
 //
 //  Created by Jay on 15/12/22.
 //  Copyright © 2015年 JJ. All rights reserved.
 //
 
-#import "JJAFNInput.h"
+#import "JJApiInput.h"
 
-@interface JJAFNInput (Page)
+@interface JJApiInput (Page)
 
 /** 当前的页数 */
 @property (nonatomic, assign) NSUInteger page;

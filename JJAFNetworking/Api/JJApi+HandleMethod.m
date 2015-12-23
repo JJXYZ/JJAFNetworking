@@ -1,15 +1,15 @@
 //
-//  JJAFNApi+HandleMethod.m
+//  JJApi+HandleMethod.m
 //  JJAFNetworking_Demo
 //
 //  Created by Jay on 15/12/17.
 //  Copyright © 2015年 JJ. All rights reserved.
 //
 
-#import "JJAFNApi+HandleMethod.h"
+#import "JJApi+HandleMethod.h"
 #import <objc/runtime.h>
 
-@implementation JJAFNApi (HandleMethod)
+@implementation JJApi (HandleMethod)
 
 #pragma mark - Inherit
 
@@ -111,80 +111,80 @@
 
 #pragma mark - Property
 
-static char kAFNApiWillstartBlockKey;
+static char kApiWillstartBlockKey;
 - (JJApiBlock)apiWillstartBlock {
-    return objc_getAssociatedObject(self, &kAFNApiWillstartBlockKey);
+    return objc_getAssociatedObject(self, &kApiWillstartBlockKey);
 }
 
 - (void)setApiWillstartBlock:(JJApiBlock)apiWillstartBlock {
-    objc_setAssociatedObject(self, &kAFNApiWillstartBlockKey, apiWillstartBlock, OBJC_ASSOCIATION_COPY_NONATOMIC);
+    objc_setAssociatedObject(self, &kApiWillstartBlockKey, apiWillstartBlock, OBJC_ASSOCIATION_COPY_NONATOMIC);
 }
 
-static char kAFNApiDidstartBlockKey;
+static char kApiDidstartBlockKey;
 - (JJApiBlock)apiDidstartBlock {
-    return objc_getAssociatedObject(self, &kAFNApiDidstartBlockKey);
+    return objc_getAssociatedObject(self, &kApiDidstartBlockKey);
 }
 
 - (void)setApiDidstartBlock:(JJApiBlock)apiDidstartBlock {
-    objc_setAssociatedObject(self, &kAFNApiDidstartBlockKey, apiDidstartBlock, OBJC_ASSOCIATION_COPY_NONATOMIC);
+    objc_setAssociatedObject(self, &kApiDidstartBlockKey, apiDidstartBlock, OBJC_ASSOCIATION_COPY_NONATOMIC);
 }
 
 
-static char kAFNApiWillHandleSuccessBlockKey;
+static char kApiWillHandleSuccessBlockKey;
 - (JJApiBlock)apiWillHandleSuccessBlock {
-    return objc_getAssociatedObject(self, &kAFNApiWillHandleSuccessBlockKey);
+    return objc_getAssociatedObject(self, &kApiWillHandleSuccessBlockKey);
 }
 
 - (void)setApiWillHandleSuccessBlock:(JJApiBlock)apiWillHandleSuccessBlock {
-    objc_setAssociatedObject(self, &kAFNApiWillHandleSuccessBlockKey, apiWillHandleSuccessBlock, OBJC_ASSOCIATION_COPY_NONATOMIC);
+    objc_setAssociatedObject(self, &kApiWillHandleSuccessBlockKey, apiWillHandleSuccessBlock, OBJC_ASSOCIATION_COPY_NONATOMIC);
 }
 
 
-static char kAFNApiDidHandleSuccessBlockKey;
+static char kApiDidHandleSuccessBlockKey;
 - (JJApiBlock)apiDidHandleSuccessBlock {
-    return objc_getAssociatedObject(self, &kAFNApiDidHandleSuccessBlockKey);
+    return objc_getAssociatedObject(self, &kApiDidHandleSuccessBlockKey);
 }
 
 - (void)setApiDidHandleSuccessBlock:(JJApiBlock)apiDidHandleSuccessBlock {
-    objc_setAssociatedObject(self, &kAFNApiDidHandleSuccessBlockKey, apiDidHandleSuccessBlock, OBJC_ASSOCIATION_COPY_NONATOMIC);
+    objc_setAssociatedObject(self, &kApiDidHandleSuccessBlockKey, apiDidHandleSuccessBlock, OBJC_ASSOCIATION_COPY_NONATOMIC);
 }
 
 
-static char kAFNApiWillHandleFailureBlockKey;
+static char kApiWillHandleFailureBlockKey;
 - (JJApiBlock)apiWillHandleFailureBlock {
-    return objc_getAssociatedObject(self, &kAFNApiWillHandleFailureBlockKey);
+    return objc_getAssociatedObject(self, &kApiWillHandleFailureBlockKey);
 }
 
 - (void)setApiWillHandleFailureBlock:(JJApiBlock)apiWillHandleFailureBlock {
-    objc_setAssociatedObject(self, &kAFNApiWillHandleFailureBlockKey, apiWillHandleFailureBlock, OBJC_ASSOCIATION_COPY_NONATOMIC);
+    objc_setAssociatedObject(self, &kApiWillHandleFailureBlockKey, apiWillHandleFailureBlock, OBJC_ASSOCIATION_COPY_NONATOMIC);
 }
 
 
-static char kAFNApiDidHandleFailureBlockKey;
+static char kApiDidHandleFailureBlockKey;
 - (JJApiBlock)apiDidHandleFailureBlock {
-    return objc_getAssociatedObject(self, &kAFNApiDidHandleFailureBlockKey);
+    return objc_getAssociatedObject(self, &kApiDidHandleFailureBlockKey);
 }
 
 - (void)setApiDidHandleFailureBlock:(JJApiBlock)apiDidHandleFailureBlock {
-    objc_setAssociatedObject(self, &kAFNApiDidHandleFailureBlockKey, apiDidHandleFailureBlock, OBJC_ASSOCIATION_COPY_NONATOMIC);
+    objc_setAssociatedObject(self, &kApiDidHandleFailureBlockKey, apiDidHandleFailureBlock, OBJC_ASSOCIATION_COPY_NONATOMIC);
 }
 
-static char kAFNApiWillCancelBlockKey;
+static char kApiWillCancelBlockKey;
 - (JJApiBlock)apiWillCancelBlock {
-    return objc_getAssociatedObject(self, &kAFNApiWillCancelBlockKey);
+    return objc_getAssociatedObject(self, &kApiWillCancelBlockKey);
 }
 
 - (void)setApiWillCancelBlock:(JJApiBlock)apiWillCancelBlock {
-    objc_setAssociatedObject(self, &kAFNApiWillCancelBlockKey, apiWillCancelBlock, OBJC_ASSOCIATION_COPY_NONATOMIC);
+    objc_setAssociatedObject(self, &kApiWillCancelBlockKey, apiWillCancelBlock, OBJC_ASSOCIATION_COPY_NONATOMIC);
 }
 
-static char kAFNApiDidCancelBlockKey;
+static char kApiDidCancelBlockKey;
 - (JJApiBlock)apiDidCancelBlock {
-    return objc_getAssociatedObject(self, &kAFNApiDidCancelBlockKey);
+    return objc_getAssociatedObject(self, &kApiDidCancelBlockKey);
 }
 
 - (void)setApiDidCancelBlock:(JJApiBlock)apiDidCancelBlock {
-    objc_setAssociatedObject(self, &kAFNApiDidCancelBlockKey, apiDidCancelBlock, OBJC_ASSOCIATION_COPY_NONATOMIC);
+    objc_setAssociatedObject(self, &kApiDidCancelBlockKey, apiDidCancelBlock, OBJC_ASSOCIATION_COPY_NONATOMIC);
 }
 
 

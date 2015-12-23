@@ -1,20 +1,20 @@
 //
-//  JJAFNApi+RewriteMethod.m
+//  JJApi+RewriteMethod.m
 //  JJAFNetworking_Demo
 //
 //  Created by Jay on 15/12/17.
 //  Copyright © 2015年 JJ. All rights reserved.
 //
 
-#import "JJAFNApi+RewriteMethod.h"
+#import "JJApi+RewriteMethod.h"
 #import "MJExtension.h"
 
-@implementation JJAFNApi (RewriteMethod)
+@implementation JJApi (RewriteMethod)
 
 #pragma mark - Inherit
 
-- (JJAFNRequestSerializerType)serializerType {
-    return JJAFNRequestSerializer_HTTP;
+- (JJApiRequestSerializerType)serializerType {
+    return JJApiRequestSerializer_HTTP;
 }
 
 - (NSOperationQueuePriority)queuePriority {
@@ -29,16 +29,16 @@
     return nil;
 }
 
-- (JJAFNHTTPType)AFNHTTPType {
-    return JJAFNHTTPType_HTTP;
+- (JJApiHTTPType)AFNHTTPType {
+    return JJApiHTTPType_HTTP;
 }
 
 - (NSTimeInterval)timeoutInterval {
     return 10;
 }
 
-- (JJAFNMethodType)AFNMethod {
-    return JJAFNMethod_GET;
+- (JJApiMethodType)AFNMethod {
+    return JJApiMethod_GET;
 }
 
 - (NSString *)URLString {

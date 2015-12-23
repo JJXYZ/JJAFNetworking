@@ -1,15 +1,15 @@
 //
-//  JJAFNListApi.m
+//  JJPageApi.m
 //  JJAFNetworking_Demo
 //
 //  Created by Jay on 15/12/21.
 //  Copyright © 2015年 JJ. All rights reserved.
 //
 
-#import "JJAFNPageApi.h"
-#import "JJAFNInput+Page.h"
+#import "JJPageApi.h"
+#import "JJApiInput+Page.h"
 
-@implementation JJAFNPageApi
+@implementation JJPageApi
 @synthesize delegate = _delegate;
 
 #pragma mark - Public Methods

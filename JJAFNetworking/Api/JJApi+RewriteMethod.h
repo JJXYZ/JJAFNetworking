@@ -1,22 +1,22 @@
 //
-//  JJAFNApi+RewriteMethod.h
+//  JJApi+RewriteMethod.h
 //  JJAFNetworking_Demo
 //
 //  Created by Jay on 15/12/17.
 //  Copyright © 2015年 JJ. All rights reserved.
 //
 
-#import "JJAFNApi.h"
+#import "JJApi.h"
 
-@interface JJAFNApi (RewriteMethod)
+@interface JJApi (RewriteMethod)
 
 #pragma mark - Inherit
 
 /** 请求方式,默认GET */
-- (JJAFNMethodType)AFNMethod;
+- (JJApiMethodType)AFNMethod;
 
 /** 请求序列化方式,默认HTTP */
-- (JJAFNRequestSerializerType)serializerType;
+- (JJApiRequestSerializerType)serializerType;
 
 /** api的优先级 */
 - (NSOperationQueuePriority)queuePriority;
@@ -28,7 +28,7 @@
 - (NSDictionary *)authorizationHeaderField;
 
 /** 请求方式,HTTP(默认)/HTTPS */
-- (JJAFNHTTPType)AFNHTTPType;
+- (JJApiHTTPType)AFNHTTPType;
 
 /** 超时时间,默认10秒 */
 - (NSTimeInterval)timeoutInterval;

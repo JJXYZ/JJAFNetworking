@@ -20,9 +20,9 @@
     
 //    [[JJDogApi alloc] start];
     
-    [[JJDogApi alloc] startWithSuccess:^(JJAFNApi *api) {
+    [[JJDogApi alloc] startWithSuccess:^(JJApi *api) {
         NSLog(@"startWithSuccess");
-    } failure:^(JJAFNApi *api) {
+    } failure:^(JJApi *api) {
         NSLog(@"failure");
     }];
 }

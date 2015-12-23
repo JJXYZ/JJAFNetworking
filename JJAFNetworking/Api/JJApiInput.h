@@ -1,13 +1,19 @@
 //
-//  JJAFNInput.m
+//  JJApiInput.h
 //  JJAFNetworking_Demo
 //
 //  Created by Jay on 15/12/18.
 //  Copyright © 2015年 JJ. All rights reserved.
 //
 
-#import "JJAFNInput.h"
 
-@implementation JJAFNInput
+/**
+ *  请求参数的基类
+ */
+
+
+#import <Foundation/Foundation.h>
+
+@interface JJApiInput : NSObject
 
 @end

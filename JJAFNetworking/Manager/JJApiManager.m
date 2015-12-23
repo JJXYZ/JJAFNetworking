@@ -6,18 +6,18 @@
 //  Copyright © 2015年 JJ. All rights reserved.
 //
 
-#import "JJAFNApiManager.h"
+#import "JJApiManager.h"
 #import "AFDownloadRequestOperation.h"
 #import "AFNetworking.h"
-#import "JJAFN_ENUM.h"
-#import "JJAFNApi.h"
-#import "JJAFNApi+RewriteMethod.h"
-#import "JJAFNApi+HandleMethod.h"
-#import "JJAFNApi+DownLoad.h"
-#import "JJAFNApi+UpLoad.h"
-#import "JJAFNApi+Log.h"
+#import "JJApi_ENUM.h"
+#import "JJApi.h"
+#import "JJApi+RewriteMethod.h"
+#import "JJApi+HandleMethod.h"
+#import "JJApi+DownLoad.h"
+#import "JJApi+UpLoad.h"
+#import "JJApi+Log.h"
 
-@interface JJAFNApiManager ()
+@interface JJApiManager ()
 
 /** OperationManager */
 @property (nonatomic, strong, readwrite) AFHTTPRequestOperationManager *manager;
@@ -27,11 +27,11 @@
 
 @end
 
-@implementation JJAFNApiManager
+@implementation JJApiManager
 
 #pragma mark - Lifecycle
 
-+ (JJAFNApiManager *)sharedInstance {
++ (JJApiManager *)sharedInstance {
     static id sharedInstance = nil;
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
@@ -43,19 +43,19 @@
 #pragma mark - Private Methods
 
 /** 设置超时时间 */
-- (void)configTimeoutInterval:(JJAFNApi *)api {
+- (void)configTimeoutInterval:(JJApi *)api {
     self.manager.requestSerializer.timeoutInterval = [api timeoutInterval];
 }
 
 /** 设置请求序列化方式 */
-- (void)configRequestSerializer:(JJAFNApi *)api {
-    if ([api serializerType] == JJAFNRequestSerializer_JSON) {
+- (void)configRequestSerializer:(JJApi *)api {
+    if ([api serializerType] == JJApiRequestSerializer_JSON) {
         self.manager.requestSerializer = [AFJSONRequestSerializer serializer];
     }
 }
 
 /** 设置授权HTTP Header */
-- (void)configAuthorizationHeaderField:(JJAFNApi *)api {
+- (void)configAuthorizationHeaderField:(JJApi *)api {
     NSDictionary *authorizationHeaderField = [api authorizationHeaderField];
     if (authorizationHeaderField.count) {
         [_manager.requestSerializer setAuthorizationHeaderFieldWithUsername:[authorizationHeaderField objectForKey:@"username"] password:[authorizationHeaderField objectForKey:@"password"]];
@@ -63,7 +63,7 @@
 }
 
 /** 设置HTTP HeaderField */
-- (void)configHeaderField:(JJAFNApi *)api {
+- (void)configHeaderField:(JJApi *)api {
     NSDictionary *headerField = [api headerField];
     if (headerField.count) {
         for (id hf in headerField.allKeys) {
@@ -76,8 +76,8 @@
 }
 
 /** HTTPS请求 */
-- (void)configHTTPS:(JJAFNApi *)api {
-    if ([api AFNHTTPType] == JJAFNHTTPType_HTTPS) {
+- (void)configHTTPS:(JJApi *)api {
+    if ([api AFNHTTPType] == JJApiHTTPType_HTTPS) {
         AFSecurityPolicy * securityPolicy = [AFSecurityPolicy policyWithPinningMode:AFSSLPinningModeCertificate];
         securityPolicy.allowInvalidCertificates = YES;
         securityPolicy.validatesDomainName = YES;
@@ -86,12 +86,12 @@
 }
 
 /** api的优先级 */
-- (void)configQueuePriority:(JJAFNApi *)api {
+- (void)configQueuePriority:(JJApi *)api {
     api.requestOperation.queuePriority = [api queuePriority];
 }
 
 /** 获取URL */
-- (NSString *)getURLString:(JJAFNApi *)api {
+- (NSString *)getURLString:(JJApi *)api {
     if ([api customURLString].length) {
         return [api customURLString];
     }
@@ -101,14 +101,14 @@
 }
 
 /** 获取参数 */
-- (id)getParameters:(JJAFNApi *)api {
+- (id)getParameters:(JJApi *)api {
     return [api parameters];
 }
 
 #pragma mark  API Result
 
 /** 处理请求成功 */
-- (void)handleSuccessApi:(JJAFNApi *)api operation:(AFHTTPRequestOperation *)operation {
+- (void)handleSuccessApi:(JJApi *)api operation:(AFHTTPRequestOperation *)operation {
     
     [api logEndApi];
     
@@ -124,7 +124,7 @@
 }
 
 /** 处理请求失败 */
-- (void)handleFailureApi:(JJAFNApi *)api operation:(AFHTTPRequestOperation *)operation {
+- (void)handleFailureApi:(JJApi *)api operation:(AFHTTPRequestOperation *)operation {
     
     [api logEndApi];
     
@@ -145,7 +145,7 @@
 }
 
 /** 记录请求的Api */
-- (void)addOperation:(JJAFNApi *)api {
+- (void)addOperation:(JJApi *)api {
     if (api.requestOperation) {
         NSString *key = [self requestHashKey:api.requestOperation];
         @synchronized(self) {
@@ -166,7 +166,7 @@
 - (void)cancelAllApi {
     NSDictionary *apiActiveDic = [_apiActiveDic copy];
     for (NSString *key in apiActiveDic) {
-        JJAFNApi *api = [apiActiveDic objectForKey:key];
+        JJApi *api = [apiActiveDic objectForKey:key];
         [api cancel];
     }
 }
@@ -190,7 +190,7 @@
     }
 }
 
-- (void)startApi:(JJAFNApi *)api {
+- (void)startApi:(JJApi *)api {
     
     [api willstart];
     
@@ -211,50 +211,50 @@
     
     NSString *URLString = [self getURLString:api];
     NSString *parameters = [self getParameters:api];
-    JJAFNMethodType method = [api AFNMethod];
-    if (method == JJAFNMethod_GET) {
+    JJApiMethodType method = [api AFNMethod];
+    if (method == JJApiMethod_GET) {
         api.requestOperation = [self.manager GET:URLString parameters:parameters success:^(AFHTTPRequestOperation * _Nonnull operation, id  _Nonnull responseObject) {
             [self handleSuccessApi:api operation:operation];
         } failure:^(AFHTTPRequestOperation * _Nullable operation, NSError * _Nonnull error) {
             [self handleFailureApi:api operation:operation];
         }];
     }
-    else if (method == JJAFNMethod_POST) {
+    else if (method == JJApiMethod_POST) {
         api.requestOperation = [self.manager POST:URLString parameters:parameters success:^(AFHTTPRequestOperation * _Nonnull operation, id  _Nonnull responseObject) {
             [self handleSuccessApi:api operation:operation];
         } failure:^(AFHTTPRequestOperation * _Nullable operation, NSError * _Nonnull error) {
             [self handleFailureApi:api operation:operation];
         }];
     }
-    else if (method == JJAFNMethod_HEAD) {
+    else if (method == JJApiMethod_HEAD) {
         api.requestOperation = [self.manager HEAD:URLString parameters:parameters success:^(AFHTTPRequestOperation * _Nonnull operation) {
             [self handleSuccessApi:api operation:operation];
         } failure:^(AFHTTPRequestOperation * _Nullable operation, NSError * _Nonnull error) {
             [self handleFailureApi:api operation:operation];
         }];
     }
-    else if (method == JJAFNMethod_DELETE) {
+    else if (method == JJApiMethod_DELETE) {
         api.requestOperation = [self.manager DELETE:URLString parameters:parameters success:^(AFHTTPRequestOperation * _Nonnull operation, id  _Nonnull responseObject) {
             [self handleSuccessApi:api operation:operation];
         } failure:^(AFHTTPRequestOperation * _Nullable operation, NSError * _Nonnull error) {
             [self handleFailureApi:api operation:operation];
         }];
     }
-    else if (method == JJAFNMethod_PUT) {
+    else if (method == JJApiMethod_PUT) {
         api.requestOperation = [self.manager PUT:URLString parameters:parameters success:^(AFHTTPRequestOperation * _Nonnull operation, id  _Nonnull responseObject) {
             [self handleSuccessApi:api operation:operation];
         } failure:^(AFHTTPRequestOperation * _Nullable operation, NSError * _Nonnull error) {
             [self handleFailureApi:api operation:operation];
         }];
     }
-    else if (method == JJAFNMethod_PATCH) {
+    else if (method == JJApiMethod_PATCH) {
         api.requestOperation = [self.manager PATCH:URLString parameters:parameters success:^(AFHTTPRequestOperation * _Nonnull operation, id  _Nonnull responseObject) {
             [self handleSuccessApi:api operation:operation];
         } failure:^(AFHTTPRequestOperation * _Nullable operation, NSError * _Nonnull error) {
             [self handleFailureApi:api operation:operation];
         }];
     }
-    else if (method == JJAFNMethod_DOWNLOAD) {
+    else if (method == JJApiMethod_DOWNLOAD) {
         if ([api targetPath].length) {
             NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:[NSURL URLWithString:URLString] cachePolicy:NSURLRequestUseProtocolCachePolicy timeoutInterval:[api timeoutInterval]];
             AFDownloadRequestOperation *downloadRequestOperation = [[AFDownloadRequestOperation alloc] initWithRequest:request targetPath:[api targetPath] shouldResume:[api shouldResume]];
@@ -271,7 +271,7 @@
             [self.manager.operationQueue addOperation:api.requestOperation];
         }
     }
-    else if (method == JJAFNMethod_UPLOAD) {
+    else if (method == JJApiMethod_UPLOAD) {
         api.requestOperation = [self.manager POST:URLString parameters:parameters constructingBodyWithBlock:api.constructingBodyBlock success:^(AFHTTPRequestOperation * _Nonnull operation, id  _Nonnull responseObject) {
             [self handleSuccessApi:api operation:operation];
         } failure:^(AFHTTPRequestOperation * _Nullable operation, NSError * _Nonnull error) {
@@ -292,7 +292,7 @@
     [api didstart];
 }
 
-- (void)cancelApi:(JJAFNApi *)api {
+- (void)cancelApi:(JJApi *)api {
     
     [api willCancel];
     

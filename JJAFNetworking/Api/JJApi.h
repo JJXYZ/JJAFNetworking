@@ -16,54 +16,53 @@
 
 #import <Foundation/Foundation.h>
 #import "AFNetworking.h"
-#import "JJAFN_ENUM.h"
-#import "JJAFNInput.h"
+#import "JJApi_ENUM.h"
+#import "JJApiInput.h"
+#import "JJApiDefine.h"
 
-@class JJAFNApi;
-@class JJAFNInput;
-
-typedef void(^JJApiBlock)(JJAFNApi *api);
+@class JJApi;
+@class JJApiInput;
 
 @protocol JJApiDelegate <NSObject>
 
 @optional
 
 /** 请求成功 */
-- (void)apiSuccess:(JJAFNApi *)api;
+- (void)apiSuccess:(JJApi *)api;
 
 /** 请求失败 */
-- (void)apiFailed:(JJAFNApi *)api;
+- (void)apiFailed:(JJApi *)api;
 
 /** 将要发起请求 */
-- (void)apiWillstart:(JJAFNApi *)api;
+- (void)apiWillstart:(JJApi *)api;
 
 /** 已经发起请求 */
-- (void)apiDidstart:(JJAFNApi *)api;
+- (void)apiDidstart:(JJApi *)api;
 
 /** 将要开始处理数据(成功) */
-- (void)apiWillHandleSuccess:(JJAFNApi *)api;
+- (void)apiWillHandleSuccess:(JJApi *)api;
 
 /** 结束处理数据(成功),回调之后调用 */
-- (void)apiDidHandleSuccess:(JJAFNApi *)api;
+- (void)apiDidHandleSuccess:(JJApi *)api;
 
 /** 将要开始处理数据(失败) */
-- (void)apiWillHandleFailure:(JJAFNApi *)api;
+- (void)apiWillHandleFailure:(JJApi *)api;
 
 /** 结束处理数据(失败) */
-- (void)apiDidHandleFailure:(JJAFNApi *)api;
+- (void)apiDidHandleFailure:(JJApi *)api;
 
 /** 将要取消 */
-- (void)apiWillCancel:(JJAFNApi *)api;
+- (void)apiWillCancel:(JJApi *)api;
 
 /** 已经取消 */
-- (void)apiDidCancel:(JJAFNApi *)api;
+- (void)apiDidCancel:(JJApi *)api;
 
 @end
 
 
 #pragma mark
 
-@interface JJAFNApi : NSObject
+@interface JJApi : NSObject
 
 #pragma mark Property
 
@@ -90,8 +89,8 @@ typedef void(^JJApiBlock)(JJAFNApi *api);
 /** 服务端返回的header字段 */
 @property (nonatomic, strong, readonly) NSDictionary *responseAllHeaderFields;
 
-/** 输入的参数(JJAFNInput类或者子类),网络请求前赋值,会转成parameters */
-@property (nonatomic, strong) JJAFNInput *input;
+/** 输入的参数(JJApiInput类或者子类),网络请求前赋值,会转成parameters */
+@property (nonatomic, strong) JJApiInput *input;
 
 /** 输出的参数,重写reformData方法给其赋值,默认为responseObject */
 @property (nonatomic, strong) id output;

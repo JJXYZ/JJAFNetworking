@@ -1,25 +1,25 @@
 //
-//  JJAFNApi+Log.m
+//  JJApi+Log.m
 //  JJAFNetworking_Demo
 //
 //  Created by Jay on 15/12/18.
 //  Copyright © 2015年 JJ. All rights reserved.
 //
 
-#import "JJAFNApi+Log.h"
-#import "JJAFNApi+RewriteMethod.h"
-#import "JJAFN_ENUM.h"
+#import "JJApi+Log.h"
+#import "JJApi+RewriteMethod.h"
+#import "JJApi_ENUM.h"
 #import <objc/runtime.h>
 
 
-@interface JJAFNApi ()
+@interface JJApi ()
 
 /** 开始请求的时间 */
 @property (nonatomic, strong) NSDate *startDate;
 
 @end
 
-@implementation JJAFNApi (Log)
+@implementation JJApi (Log)
 
 #pragma mark - Public Methods
 
@@ -65,22 +65,22 @@
 
 - (NSString *)stringForMethod {
     switch (self.AFNMethod) {
-        case JJAFNMethod_GET:
+        case JJApiMethod_GET:
             return @"GET";
             break;
-        case JJAFNMethod_POST:
+        case JJApiMethod_POST:
             return @"POST";
             break;
-        case JJAFNMethod_HEAD:
+        case JJApiMethod_HEAD:
             return @"HEAD";
             break;
-        case JJAFNMethod_PUT:
+        case JJApiMethod_PUT:
             return @"PUT";
             break;
-        case JJAFNMethod_DELETE:
+        case JJApiMethod_DELETE:
             return @"DELETE";
             break;
-        case JJAFNMethod_PATCH:
+        case JJApiMethod_PATCH:
             return @"PATCH";
             break;
         default:
@@ -91,13 +91,13 @@
 
 #pragma mark - Property
 
-static char kAFNApiStartDateKey;
+static char kApiStartDateKey;
 - (NSDate *)startDate {
-    return (NSDate *)objc_getAssociatedObject(self, &kAFNApiStartDateKey);
+    return (NSDate *)objc_getAssociatedObject(self, &kApiStartDateKey);
 }
 
 - (void)setStartDate:(NSDate *)startDate {
-    objc_setAssociatedObject(self, &kAFNApiStartDateKey, startDate, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
+    objc_setAssociatedObject(self, &kApiStartDateKey, startDate, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
 }
 
 

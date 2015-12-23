@@ -6,12 +6,12 @@
 //  Copyright © 2015年 JJ. All rights reserved.
 //
 
-#import "JJAFNApi.h"
-#import "JJAFNApi+HandleMethod.h"
-#import "JJAFNApiManager.h"
-#import "JJAFNInput.h"
+#import "JJApi.h"
+#import "JJApi+HandleMethod.h"
+#import "JJApiManager.h"
+#import "JJApiInput.h"
 
-@implementation JJAFNApi
+@implementation JJApi
 
 #pragma mark - Public Methods
 
