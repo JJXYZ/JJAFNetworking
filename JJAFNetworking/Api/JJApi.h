@@ -23,6 +23,8 @@
 @class JJApi;
 @class JJApiInput;
 
+typedef void(^JJApiBlock)(JJApi *api);
+
 @protocol JJApiDelegate <NSObject>
 
 @optional

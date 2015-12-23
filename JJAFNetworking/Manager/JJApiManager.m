@@ -258,9 +258,6 @@
         if ([api targetPath].length) {
             NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:[NSURL URLWithString:URLString] cachePolicy:NSURLRequestUseProtocolCachePolicy timeoutInterval:[api timeoutInterval]];
             AFDownloadRequestOperation *downloadRequestOperation = [[AFDownloadRequestOperation alloc] initWithRequest:request targetPath:[api targetPath] shouldResume:[api shouldResume]];
-            [api.requestOperation setUploadProgressBlock:^(NSUInteger bytesWritten, long long totalBytesWritten, long long totalBytesExpectedToWrite) {
-                
-            }];
             [downloadRequestOperation setProgressiveDownloadProgressBlock:api.progressiveDownloadProgressBlock];
             [downloadRequestOperation setCompletionBlockWithSuccess:^(AFHTTPRequestOperation * _Nonnull operation, id  _Nonnull responseObject) {
                 [self handleSuccessApi:api operation:operation];
@@ -277,9 +274,7 @@
         } failure:^(AFHTTPRequestOperation * _Nullable operation, NSError * _Nonnull error) {
             [self handleFailureApi:api operation:operation];
         }];
-        [api.requestOperation setUploadProgressBlock:^(NSUInteger bytesWritten, long long totalBytesWritten, long long totalBytesExpectedToWrite) {
-            
-        }];
+        [api.requestOperation setUploadProgressBlock:api.uploadProgressBlock];
     }
     
     /** api的优先级 */

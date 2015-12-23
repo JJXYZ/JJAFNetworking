@@ -10,8 +10,5 @@
 #define JJApiDefine_h
 
 
-@class JJApi;
-
-typedef void(^JJApiBlock)(JJApi *api);
 
 #endif /* JJApiDefine_h */
