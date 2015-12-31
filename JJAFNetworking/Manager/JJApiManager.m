@@ -83,6 +83,10 @@
         securityPolicy.validatesDomainName = YES;
         self.manager.securityPolicy = securityPolicy;
     }
+    else {
+        AFSecurityPolicy * securityPolicy = [AFSecurityPolicy defaultPolicy];
+        self.manager.securityPolicy = securityPolicy;
+    }
 }
 
 /** api的优先级 */
