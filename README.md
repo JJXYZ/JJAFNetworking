@@ -13,5 +13,3 @@
 * 手动导入：引入头文件JJAFNetworking.h
 
 * cocoapods导入：pod 'JJAFNetworking', '~> 1.0'
-
-PS:非常感谢YTKNetwork提供的思路
